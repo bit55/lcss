@@ -1,0 +1,88 @@
+/*! Badge */
+
+.badge {
+  background: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #333;
+  display: inline-block;
+  vertical-align:baseline;
+  font-size: 0.78571rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0.25em .5em;
+  min-height: 1em;  min-width: 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.badge.-subtle {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+.badge.-pill {
+  padding: 0.25em .5em;
+  border-radius: 2em;
+  border:none;
+}
+.badge.-success {
+  background-color: #14892c;
+  border-color: #14892c;
+  color: #fff;
+}
+.badge.-success.-subtle {
+  background-color: #fff;
+  border-color: #60b070;
+  color: #14892c;
+}
+.badge.-error {
+  background-color: #d04437;
+  border-color: #d04437;
+  color: #fff;
+}
+.badge.-error.-subtle {
+  background-color: #fff;
+  border-color: #e8a29b;
+  color: #d04437;
+}
+.badge.-current {
+  background-color: #f6c342;
+  border-color: #f6c342;
+  color: #594300;
+}
+
+.badge.-current.-subtle {
+  background-color: #fff;
+  border-color: #ffe9a8;
+  color: #594300;
+}
+.badge.-complete {
+  background-color: #4a6785;
+  border-color: #4a6785;
+  color: #fff;
+}
+.badge.-complete.-subtle {
+  background-color: #fff;
+  border-color: #a5b3c2;
+  color: #4a6785;
+}
+.badge.-moved {
+  background-color: #815b3a;
+  border-color: #815b3a;
+  color: #fff;
+}
+.badge.-moved.-subtle {
+  background-color: #fff;
+  border-color: #c0ad9d;
+  color: #815b3a;
+}
+
+//--- addit ---
+.btn .badge,
+.tabs .badge {
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+}

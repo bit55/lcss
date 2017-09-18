@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=640">
+  <title></title>
+  
+  <style>
+      //@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=cyrillic');
+  </style>
+  <link rel="stylesheet" href="../dist/css/font-awesome.css" />
+  <link rel="stylesheet" href="../dist/css/build.css" />
+  
+  <script src="https://yastatic.net/jquery/1.8.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
+
+</head>
+
+<body>
+
+<div class="header">
+  <div class="header-inner">
+
+    <div class="logo">
+        <a class="logo__link" href="#">Example App</a>
+    </div>
+
+    <ul class="nav">
+          <li class="nav__item"><a class="nav__link" href="#">First link</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">Second link</a></li>
+          <li class="nav__item"><a class="nav__link dropdown2-trigger" href="#">Second link</a></li>
+          <li class="nav__item"><a href="#" class="btn -primary">Button</a></li>
+          <li class="nav__item"><a href="#" class="btn -primary"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
+          <li class="nav__item"><a href="#" class="btn"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
+    </ul>
+    
+    <div class="nav -right">
+        <div class="qs">
+            <input class="qs__input" type="text" placeholder="поиск..."/>
+        </div>
+    </div>
+
+    <ul class="nav -right">          
+        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span class="badge -pill -error">error</span></a></li>
+        <li class="nav__item"><a class="nav__link" href="#"><i class="ico-fa -mright fa-user-circle-o"></i> devg@ya.ru</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p>Another text</p>
+    <div class="breadcrumb"><a href="#">Bread</a> / <a href="#">crumb</a></div>
+    <div class="page-header-right">
+      <button class="btn -subtle">Cancel</button>
+      <button class="btn -subtle">Cancel</button>
+    </div>
+    <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
+    
+  </div>
+</header>
+
+<div style="padding:20px">
+
+<h1>This is 1st level heading</h1>
+
+<p>This is a test paragraph.</p>
+<p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+
+<h2>This is 2nd level heading</h2>
+<h3>This is 3rd level heading</h3>
+<h4>This is 4th level heading</h4>
+<h5>This is 5th level heading</h5>
+<h6>This is 6th level heading</h6>
+
+<p>This is a test paragraph.</p>
+<hr>
+<p style="background:#999;height:1rem"></p>
+<p>This is a test paragraph.</p>
+
+<blockquote>Blockquote</blockquote>
+
+<ol>
+<li>One.</li>
+<li>Two.</li>
+<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+</ol>
+
+<p>This is a test paragraph.</p>
+
+<ul>
+<li>One.</li>
+<li>Two.</li>
+<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+</ul>
+
+<p>This is a test paragraph with <code>code</code>.</p>
+
+<p>This is a test paragraph and <a href="#">link</a>, and <a href="#"target="_blank">link external</a>.</p>
+<pre>
+<code>public static function error404($msg = '')
+{
+  header('HTTP/1.0 404 Not Found');
+  if(!$msg) $msg = '404. Страница не найдена';
+  self::_()->title .= $msg;
+  self::_()->render('site/error404', array('msg'=>$msg));
+  exit;
+}
+</code>
+</pre>
+
+<h2>Badges</h2>
+<div class="flatpack-example">
+<p>
+    <span class="badge">default</span>
+    <span class="badge -success">success</span>
+    <span class="badge -error">error</span>
+    <span class="badge -current">current</span>
+    <span class="badge -complete">new</span>
+    <span class="badge -moved">moved</span>
+</p>
+<p>
+    <span class="badge -subtle">default</span>
+    <span class="badge -subtle -success">success</span>
+    <span class="badge -subtle -error">error</span>
+    <span class="badge -subtle -current">current</span>
+    <span class="badge -subtle -complete">new</span>
+    <span class="badge -subtle -moved">moved</span>
+</p>
+</div>
+
+<h2>Badges (-pill) <sup class="badge -current">New!</sup></h2>
+<p>Use the <code>.-pill</code> modifier class to make badges more rounded (with a larger border-radius).</p>
+<div class="">
+  <p>Inbox <span class="badge -pill">1</span></p>
+  
+  <p>Colored badge 
+  <span class="badge -pill">default &times;</span>
+    <span class="badge -pill -success">success</span>
+    <span class="badge -pill -error">error</span>
+    <span class="badge -pill -current">current</span>
+    <span class="badge -pill -complete">new</span>
+    <span class="badge -pill -moved">moved</span>
+  <br></p>
+  <br>
+  <button class="btn">In button <span class="badge -pill">1</span></button>
+  <button class="btn -primary">In button <span class="badge -pill">2</span></button>
+  <a href="#" class="btn -primary">In link <span class="badge -pill">2</span></a>
+  <button class="btn">In button <span class="badge -pill -current">2</span></button>
+  <a href="#" class="btn">In link <span class="badge -pill -current">2</span></a>
+  <br>
+</div>
+
+<h2><span class="ico-fa -mright fa-home"></span>Icons</h2>
+
+<p>
+    <span class="fa fa-edit"></span>
+    <span class="ico-fa fa-edit"></span>
+
+</p>
+<p>
+    <button class="btn"><i class="ico-fa fa-edit"></i> Iconed button</button>
+    <button class="btn -primary"><i class="ico-fa fa-edit"></i> Iconed button</button>
+
+</p>
+
+<h2>Buttons</h2>
+<p>
+  <button class="btn">Button</button> 
+  <a href="#" class="btn">Button as link</a> 
+  <a href="#" class="btn -primary">Button as link 2</a> 
+  <button class="btn -primary">Primary button</button>
+  <button class="btn -light">Light button </button>
+  
+  <br><br>
+  
+  <button class="btn"><span class="ico-fa -mright fa-cog fa-spin" aria-hidden="true"></span> Iconed button</button>
+  <button class="btn"><span class="ico-fa -mright fa-spinner fa-pulse" aria-hidden="true"></span> Iconed button</button>
+  <button class="btn"><span class="ico-fa -mright fa-bar-chart" aria-hidden="true"></span> Iconed button</button>
+  
+  <br><br>
+  
+  <button class="btn"><i class="ico-fa fa-check"></i> Iconed button</button>
+  <button class="btn"><i class="ico-fa fa-pencil"></i> Iconed button</button>
+  <button class="btn"><i class="ico-fa fa-edit"></i> Iconed button</button>
+  
+  <br><br>
+  
+  <button class="btn" disabled>Disabled button</button>
+  <button class="btn -subtle">Cancel</button>
+  
+  <button class="btn"><span class="fa-cog ico-fa"></span></button>
+  <button class="btn -subtle"><span class="fa-cog ico-fa"></span>  Subtle button</button>
+  <button class="btn" disabled>Disabled button</button>
+  <button class="btn -primary" disabled>Primary Disabled</button>
+
+  <br><br>
+  <button class="btn -compact">Compact</button>
+  <button class="btn -compact"><span class="ico-fa -mright fa-bars"></span> Compact</button>
+  <button class="btn -compact -primary">Compact Primary</button>
+</p>
+<h3>Buttons group</h3>
+
+<p>
+  <div class="btns">
+    <button class="btn">Button <span class="fa-ellipsis-h ico-fa -mleft"></span></button> 
+    <a href="#" class="btn">Button as link</a>
+  </div>
+  <div class="btns">
+    <button class="btn">Button</button> 
+    <button class="btn">Button</button>     
+    <button class="btn" disabled>Disabled button</button>
+  </div>
+</p>
+
+
+<h2>Forms</h2>
+
+<div class="flatpack-example">
+
+    <form action="#" method="post" id="d1" class="form">
+        <fieldset>
+            <div class="field-group">
+                <label for="d-fname">Default field<span class="required">*</span></label>
+                <input class="input" id="d-fname" name="d-fname" title="first name" type="text">
+
+                <div class="description">Default width input of a required field</div>
+            </div>
+            <div class="field-group">
+                <label for="d-lname">Long field</label>
+                <input class="input long-field" id="d-lname" name="d-lname" title="last name" type="text">
+
+                <div class="error">Error message here</div>
+                <div class="description">Long width input</div>
+            </div>
+            <div class="field-group">
+                <label for="d-fname-short">Short field</label>
+                <input class="input short-field" id="d-fname-short" name="d-fname-short" title="first name" type="text">
+
+                <div class="description">Short width input</div>
+            </div>
+            <div class="field-group">
+                <label for="d-fname-disabled">Disabled field</label>
+                <input class="input" id="d-fname-disabled" name="d-fname-disabled" title="first name" disabled="" type="text">
+
+                <div class="description">Disable field input</div>
+            </div>
+            <div class="field-group">
+                <label for="email1">Email</label>
+                <input class="input medium-field" id="email1" name="email" title="email" placeholder="you@example.com" type="email"> 
+                <button type="submit" class="btn">Button</button>
+                <span class="icon icon-help">help</span>
+
+                <div class="description">Medium width input</div>
+            </div>
+            <div class="field-group">
+                <label for="address1">Address</label>
+                <input class="input medium-long-field" id="address1" name="address" title="address" placeholder="1 fake street" type="text">
+
+                <div class="description">Medium-long width input</div>
+            </div>
+            <div class="field-group">
+                <label for="password1" accesskey="p">Password</label>
+                <input class="input" id="password1" name="password" title="password" type="password">
+            </div>
+        </fieldset>
+    </form>
+
+    <form action="#" method="post" id="d2" class="form top-label">
+        <h3>Top labels</h3>
+        <fieldset class="top-label">
+            <div class="field-group top-label">
+                <label for="fname">First Name<span class="required"></span></label>
+                <input class="input" id="fname" name="fname" title="first name" type="text">
+            </div>
+            <div class="field-group">
+                <label for="lname">Last Name<span class="required"></span></label>
+                <input class="input long-field" id="lname" name="lname" title="last name" type="text"> <button type="submit" class="btn">Button</button>
+            </div>
+            <div class="field-group">
+                <input class="input" id="fullname" placeholder="Enter your first and last names" name="fullname" title="first and last name" type="text">
+            </div>
+        </fieldset>
+    </form>
+
+    <form action="#" method="post" id="d3" class="aui">
+        <h3>Dropdowns and multi select</h3>
+        <fieldset>
+            <legend><span>Dropdowns and multi select</span></legend>
+            <div class="field-group">
+                <label for="dBase">Dropdown</label>
+                <select class="select" id="dBase" name="dBase" title="database select">
+                    <option>Select</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <optgroup label="Group 1">
+                        <option>Option one</option>
+                        <option>Option two</option>
+                    </optgroup>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="multiselect">Multi select</label>
+                <select class="select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+                    <option>option one</option>
+                    <option>option two</option>
+                    <option>option three</option>
+                    <option>option four</option>
+                    <option>option five</option>
+                    <option>option six</option>
+                </select>
+
+                <div class="description">Multi select description</div>
+            </div>
+        </fieldset>
+
+        <h3>Textarea</h3>
+            <div class="field-group">
+                <label for="comment">Comment</label>
+                <textarea class="textarea" name="comment" id="comment" placeholder="Your comment here..."></textarea>
+            </div>
+            <div class="field-group">
+                <label for="licenseKey">License key</label>
+                <textarea class="textarea" rows="6" cols="10" name="licenseKey" id="licenseKey"></textarea>
+            </div>
+        <div class="btns-container">
+            <div class="btns">
+                <input class="btn submit" value="Save" id="d-save-btn1" type="submit">
+                <a class="btn cancel" href="#">Cancel</a>
+            </div>
+        </div>
+
+        <h3>Radio buttons</h3>
+        <fieldset class="group">
+            <legend><span>Radio buttons</span></legend>
+            <div class="radio">
+                <input class="radio" checked="checked" name="rads" id="irOne" type="radio">
+                <label for="irOne">Save as a blog post</label>
+            </div>
+            <div class="radio">
+                <input class="radio" name="rads" id="irTwo" type="radio">
+                <label for="irTwo">Save as a page</label>
+            </div>
+            <div class="radio">
+                <input class="radio" name="rads" id="irThree" type="radio">
+                <label for="irThree">Save to your drafts</label>
+            </div>
+        </fieldset>
+
+        <h3>Checkboxes</h3>
+        <fieldset class="group">
+            <legend><span>Checkboxes</span></legend>
+            <div class="checkbox">
+                <input class="checkbox" name="cbOne" id="cbOne" type="checkbox">
+                <label for="cbOne">Receive email</label>
+            </div>
+            <div class="checkbox">
+                <input class="checkbox" name="cbTwo" id="cbTwo" type="checkbox">
+                <label for="cbTwo">Receive push notification</label>
+            </div>
+            <div class="checkbox">
+                <input class="checkbox" name="cbThree" id="cbThree" type="checkbox" disabled>
+                <label for="cbThree">Receive in-app notification</label>
+            </div>
+        </fieldset>
+
+        <h3>File upload</h3>
+        <fieldset>
+            <legend><span>File upload<span class="icon icon-required"></span></span></legend>
+            <div class="field-group">
+                <label for="uploadFile">Upload file</label>
+                <input class="upfile" id="uploadFile" name="uploadFile" title="upload file" type="file">
+            </div>
+            <div class="field-group">
+                <label for="ffi1">Fancy File Input</label>
+                <label class="ffi" data-ffi-button-text="Browse">
+                    <input id="ffi1" name="ffi1" aria-label="Fancy File Input" type="file">
+                </label>
+            </div>
+        </fieldset>
+    </form>
+    
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/*! Icons */
+
+
+
+.ico-fa {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color:inherit;
+  width: auto;
+  font-size: inherit;
+  line-height: 1;
+  position:relative;
+  /* коррекция положения 2/24 */
+  ///top:-0.083em;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; 
+  speak: none;
+  vertical-align: baseline;
+}
+
+.ico-fa.-mright {
+  margin-right:0.5em;
+  margin-left:0;
+}
+.ico-fa.-mleft {
+  margin-left:0.5em;
+  margin-right:0;
+}

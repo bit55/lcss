@@ -1,0 +1,139 @@
+/*! Typography */
+html {
+    font-size: 14px;  
+}
+body {
+  /* background: #f5f5f5; */
+  color: #333;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;  
+  line-height: 1.42857142857143; // 1/0.7
+}
+/* Default margins */
+p, ul, ol, dl, h1, h2, h3, h4, h5, h6, 
+blockquote, pre, form, table {
+  margin: .7rem 0 0 0;
+}
+/* No top margin to interfere with box padding */
+p:first-child, ul:first-child, ol:first-child, dl:first-child,
+h1:first-child, h2:first-child, h3:first-child, h4:first-child,
+h5:first-child, h6:first-child, blockquote:first-child,
+pre:first-child, form:first-child, table:first-child {
+  margin-top: 0;
+}
+/* Headings: desired line height in px / font size = unitless line height */
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  color: #333;
+  font-weight: normal;
+  text-transform: none;
+  margin: 30px 0 0 0;
+}
+
+h1 {  
+  font-size: 32px;
+  line-height: 1.25;
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+h4 {
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 20px 0 0 0;
+}
+h5 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.42857143;
+  margin: 20px 0 0 0;
+}
+h6 {
+  color: #707070;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.66666667;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+h1:first-child, h2:first-child, h3:first-child, 
+h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
+/* Nice styles for using subheadings */
+h1 + h2, h2 + h3, h3 + h4,
+h4 + h5, h5 + h6 {
+  margin-top: .7rem;
+}
+
+a {
+  color: #3572b0;
+  text-decoration: underline;
+}
+a:focus, a:hover, a:active {
+  text-decoration: underline;
+}
+
+  
+/* Other typographical elements */
+small {
+  color: #707070;
+  font-size: 12px;
+  line-height: 1.33333333333333;
+}
+code, kbd {
+  font-family: Consolas,Menlo,"Liberation Mono", monospace;
+  font-size:13px;
+  background: #f5f5f5;
+  border-radius: 3.01px;
+  padding: 2px 4px;
+  border:1px solid rgba(0,0,0,0.1);
+}
+
+pre code {
+  color: #000;
+  display: block;
+  padding: 1rem; 
+  overflow:auto;
+}
+
+var, address, dfn, cite {
+  font-style: italic;
+}
+cite:before {
+  content: "\2014 \2009";
+}
+blockquote {
+  border-left: 1px solid #ccc;
+  color: #707070;
+  margin-left: 19px;
+  padding: .7rem 20px;
+}
+blockquote > cite {
+  display: block;
+  margin-top: .7rem;
+}
+q { color: #707070; }
+q:before { content: open-quote; }
+q:after  { content: close-quote; }
+abbr {
+  border-bottom: 1px #707070 dotted;
+  cursor: help;
+}
+
+table { 
+  border-collapse:collapse; 
+  border-spacing:0; 
+}
+
+hr {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  border:0;
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+}
