@@ -3,11 +3,11 @@ html {
     font-size: 14px;  
 }
 body {
-  /* background: #f5f5f5; */
-  color: #333;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 14px;  
-  line-height: 1.42857142857143; // 1/0.7
+  background: $body-bg;
+  color: $gray-dark;
+  font-family: $font-family-base;
+  font-size: $font-size-base;  
+  line-height: $line-height-base;
 }
 /* Default margins */
 p, ul, ol, dl, h1, h2, h3, h4, h5, h6, 
@@ -24,7 +24,7 @@ pre:first-child, form:first-child, table:first-child {
 /* Headings: desired line height in px / font size = unitless line height */
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-  color: #333;
+  color: $gray-dark;
   font-weight: normal;
   text-transform: none;
   margin: 30px 0 0 0;
@@ -50,7 +50,7 @@ h4 {
 h5 {
   font-size: 14px;
   font-weight: bold;
-  line-height: 1.42857143;
+  line-height: $line-height-base;
   margin: 20px 0 0 0;
 }
 h6 {
@@ -72,25 +72,25 @@ h4 + h5, h5 + h6 {
 }
 
 a {
-  color: #3572b0;
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: $link-decoration;
 }
 a:focus, a:hover, a:active {
-  text-decoration: underline;
+  text-decoration: $link-hover-decoration;
 }
 
   
 /* Other typographical elements */
 small {
   color: #707070;
-  font-size: 12px;
+  font-size: $font-size-small;
   line-height: 1.33333333333333;
 }
 code, kbd {
-  font-family: Consolas,Menlo,"Liberation Mono", monospace;
-  font-size:13px;
-  background: #f5f5f5;
-  border-radius: 3.01px;
+  font-family: $font-family-mono;
+  font-size:$font-size-mono;
+  background: $gray-lightest;
+  border-radius: 3px;
   padding: 2px 4px;
   border:1px solid rgba(0,0,0,0.1);
 }

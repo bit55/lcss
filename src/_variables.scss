@@ -20,37 +20,27 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #373a3c !default;
-$gray:                      #7b8a8b;
-$gray-light:                #95a5a6;
-$gray-lighter:              #b4bcc2;
-$gray-lightest:             #ecf0f1;
+$gray-dark:                 #333 !default;
+$gray:                      #ccc;
+$gray-light:                #eee;
+$gray-lighter:              #f1f1f1;
+$gray-lightest:             #f5f5f5;
+
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             #2C3E50;
-$brand-success:             #18BC9C;
-$brand-info:                #3498DB;
-$brand-warning:             #F39C12;
-$brand-danger:              #E74C3C;
-$brand-inverse:             $gray-dark !default;
+$brand-primary:             #3572b0;
+$brand-primary-darken:      #205081;
+$brand-primary-lighter:     #000;
+$brand-primary-lightest:    #9cbad9;
 
-$brand-logo1:               #E3010F;
-$brand-logo2:               #F09900;
-$brand-logo3:               #3498DB;
-
+$brand-success:             #14892C;
+$brand-info:                #4A6785;
+$brand-warning:             #F6C342;
+$brand-danger:              #D04437;
+$brand-moved:               #815B3A;
 
 // Options
 //
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
-
 
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
@@ -66,34 +56,24 @@ $sizes: (
 
 $body-bg:       #fff !default;
 $body-color:    $gray-dark !default;
-$inverse-bg:    $gray-dark !default;
-$inverse-color: $gray-lighter !default;
-
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:            $brand-success;
-$link-decoration:       none !default;
-$link-hover-color:      darken($link-color, 5%) !default;
+$link-color:            $brand-primary;
+$link-decoration:       underline !default;
+//$link-hover-color:      darken($link-color, 5%) !default;
 $link-hover-decoration: underline !default;
 
 
+$font-family-base:      Roboto, Arial, sans-serif !default;
+$font-size-base:        14px;
+$line-height-base:      1.42857142857143;// 1/0.7
+
+$font-size-small:       12px;
+
+$font-family-mono:      Consolas, "Liberation Mono", monospace;
+$font-size-mono:        13px;
 
 
-// Code
-
-$code-font-size:              90% !default;
-$code-padding-x:              .4rem !default;
-$code-padding-y:              .2rem !default;
-$code-color:                  #bd4147 !default;
-$code-bg:                     $gray-lightest !default;
-
-$kbd-color:                   $white !default;
-$kbd-bg:                      $gray-dark !default;
-
-$pre-bg:                      $gray-lightest !default;
-$pre-color:                   $gray-dark !default;
-$pre-border-color:            #ccc !default;
-$pre-scrollable-max-height:   340px !default;

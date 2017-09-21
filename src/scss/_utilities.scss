@@ -3,7 +3,7 @@
  */
 
 
-.hidden { display:none; visibility:hidden;}
+.hidden { display:none !important;}
 .clearfix:before, .clearfix:after { content:""; display:table; }
 .clearfix:after { clear:both; }
 

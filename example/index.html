@@ -41,7 +41,7 @@
     </div>
 
     <ul class="nav -right">          
-        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span class="badge -pill -error">error</span></a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span id="top-badge" class="badge -pill -danger">danger</span></a></li>
         <li class="nav__item"><a class="nav__link" href="#"><i class="ico-fa -mright fa-user-circle-o"></i> devg@ya.ru</a></li>
     </ul>
   </div>
@@ -52,7 +52,7 @@
     <p>Another text</p>
     <div class="breadcrumb"><a href="#">Bread</a> / <a href="#">crumb</a></div>
     <div class="page-header-right">
-      <button class="btn -subtle">Cancel</button>
+      <button class="btn -subtle" onclick="$('#top-badge').toggleClass('hidden');">Top Badge</button>
       <button class="btn -subtle">Cancel</button>
     </div>
     <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
@@ -100,12 +100,12 @@
 
 <p>This is a test paragraph and <a href="#">link</a>, and <a href="#"target="_blank">link external</a>.</p>
 <pre>
-<code>public static function error404($msg = '')
+<code>public static function danger404($msg = '')
 {
   header('HTTP/1.0 404 Not Found');
   if(!$msg) $msg = '404. Страница не найдена';
   self::_()->title .= $msg;
-  self::_()->render('site/error404', array('msg'=>$msg));
+  self::_()->render('site/danger404', array('msg'=>$msg));
   exit;
 }
 </code>
@@ -116,40 +116,42 @@
 <p>
     <span class="badge">default</span>
     <span class="badge -success">success</span>
-    <span class="badge -error">error</span>
-    <span class="badge -current">current</span>
-    <span class="badge -complete">new</span>
+    <span class="badge -danger">danger</span>
+    <span class="badge -warning">warning</span>
+    <span class="badge -info">new</span>
     <span class="badge -moved">moved</span>
 </p>
 <p>
     <span class="badge -subtle">default</span>
     <span class="badge -subtle -success">success</span>
-    <span class="badge -subtle -error">error</span>
-    <span class="badge -subtle -current">current</span>
-    <span class="badge -subtle -complete">new</span>
+    <span class="badge -subtle -danger">danger</span>
+    <span class="badge -subtle -warning">warning</span>
+    <span class="badge -subtle -info">new</span>
     <span class="badge -subtle -moved">moved</span>
 </p>
 </div>
 
-<h2>Badges (-pill) <sup class="badge -current">New!</sup></h2>
-<p>Use the <code>.-pill</code> modifier class to make badges more rounded (with a larger border-radius).</p>
+<h2>Badges (-pill) <sup class="badge -warning">New!</sup></h2>
+<hr>
+<cite>Use the <code>.-pill</code> modifier class to make badges more rounded (with a larger border-radius).</cite>
+<hr>
 <div class="">
   <p>Inbox <span class="badge -pill">1</span></p>
   
   <p>Colored badge 
   <span class="badge -pill">default &times;</span>
     <span class="badge -pill -success">success</span>
-    <span class="badge -pill -error">error</span>
-    <span class="badge -pill -current">current</span>
-    <span class="badge -pill -complete">new</span>
+    <span class="badge -pill -danger">danger</span>
+    <span class="badge -pill -warning">warning</span>
+    <span class="badge -pill -info">new</span>
     <span class="badge -pill -moved">moved</span>
   <br></p>
   <br>
   <button class="btn">In button <span class="badge -pill">1</span></button>
   <button class="btn -primary">In button <span class="badge -pill">2</span></button>
   <a href="#" class="btn -primary">In link <span class="badge -pill">2</span></a>
-  <button class="btn">In button <span class="badge -pill -current">2</span></button>
-  <a href="#" class="btn">In link <span class="badge -pill -current">2</span></a>
+  <button class="btn">In button <span class="badge -pill -warning">2</span></button>
+  <a href="#" class="btn">In link <span class="badge -pill -warning">2</span></a>
   <br>
 </div>
 
@@ -232,7 +234,7 @@
                 <label for="d-lname">Long field</label>
                 <input class="input long-field" id="d-lname" name="d-lname" title="last name" type="text">
 
-                <div class="error">Error message here</div>
+                <div class="danger">danger message here</div>
                 <div class="description">Long width input</div>
             </div>
             <div class="field-group">
@@ -317,6 +319,46 @@
                 <div class="description">Multi select description</div>
             </div>
         </fieldset>
+        
+        <h3>Tabs</h3>
+        
+        <ul class="tabs -lined">
+          <li class="tabs__item"><a class="tabs__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#">Tab 2</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#">Tab 3</a></li>
+          <li class="tabs__item"><a class="tabs__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+        
+        <ul class="tabs2 -lined">
+          <li class="tabs2__item"><a class="tabs2__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs2__item"><a class="tabs2__link" href="#">Tab 2</a></li>
+          <li class="tabs2__item"><a class="tabs2__link" href="#">Tab 3</a></li>
+          <li class="tabs2__item"><a class="tabs2__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+        
+        <ul class="tabs3 -lined">
+          <li class="tabs3__item"><a class="tabs3__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs3__item"><a class="tabs3__link" href="#">Tab 2</a></li>
+          <li class="tabs3__item"><a class="tabs3__link" href="#">Tab 3</a></li>
+          <li class="tabs3__item"><a class="tabs3__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+        
+        <ul class="tabs4 -lined">
+          <li class="tabs4__item"><a class="tabs4__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs4__item"><a class="tabs4__link" href="#">Tab 2</a></li>
+          <li class="tabs4__item"><a class="tabs4__link" href="#">Tab 3</a></li>
+          <li class="tabs4__item"><a class="tabs4__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+        
+        <h3>Alerts</h3>
+        
+        <div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -success">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -warning">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -danger">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -info">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -moved">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
+        <div class="alert -primary">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div>
 
         <h3>Textarea</h3>
             <div class="field-group">

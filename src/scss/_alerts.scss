@@ -1,0 +1,32 @@
+/*! Alerts */
+
+.alert {
+  background: $gray-lightest;
+  border-radius: 3px;
+  padding: 7px 14px;
+  border:1px solid rgba(0,0,0,0.1);
+  margin-top:1rem;
+  
+    &:first-child {
+	    margin-top: 0;
+	}
+	&.-success   {
+		background-color: lighten($brand-success, 50%);
+	}
+	&.-warning {
+		background-color: lighten($brand-warning, 20%);
+	}
+	&.-danger  {
+		background-color: lighten($brand-danger, 30%);
+	}
+	&.-info  {
+		background-color: lighten($brand-info, 40%);
+	}
+	&.-moved  {
+		background-color: lighten($brand-moved, 40%);
+	}
+	&.-primary  {
+		background-color: lighten($brand-primary, 40%);
+	}
+}
+

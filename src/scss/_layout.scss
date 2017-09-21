@@ -1,7 +1,7 @@
 /*! Layout */
 
 .header {
-  background: #205081;
+  background: $brand-primary-darken;
   /* border-bottom: 1px solid #2e3D54; */
   box-sizing: border-box;
   color: #fff;
@@ -143,7 +143,7 @@
 
 
 .page-header {
-    background-color: #f5f5f5;
+    background-color: $gray-lightest;
     border-bottom:1px solid rgba(0,0,0,0.1);
 }
 .page-header:after {
