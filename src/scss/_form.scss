@@ -2,7 +2,7 @@
 
 .required {
   display:inline-block;
-  color:#d33;
+  color: darken($brand-danger, 20%);
   content:'*';
   width:1em;
   height:1em;
@@ -12,24 +12,26 @@
   margin: 20px 0 0 0;
   position: relative;
 }
+.form label {
+  color: #707070;
+}
+
+.form-group {margin-bottom:1rem}
+.form-label {}
+
+.form-text {
+  color: #707070;
+  font-size: 12px;
+  line-height: 1.66667;
+  margin: 5px 0 0 0;
+}
+.form-text:first-child {
+  margin-top: 0;
+}
 
 .form:first-child {
   margin-top: 0;
 }
-
-.form optgroup {
-  background-color: $gray-lightest;
-  color: #707070;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.form option,
-.form optgroup option {
-  background-color: #fff;
-  color: $gray-dark;
-}
-
 .form .short-field {
   max-width: 75px;
 }
@@ -45,82 +47,10 @@
 .form .full-width-field {
   max-width: none;
 }
-/* Structural elements */
-.form fieldset {
-  border: 0;
-  clear: both;
+
+.top-label .form-label {
   display: block;
-  margin: 0;
-  padding: 0;
-  position: relative;
 }
-.form legend,
-.form label {
-  color: #707070;
-}
-
-.icon-required {
-  left: 3px;
-  position: relative;
-  top: 3px;
-}
-.form .description {
-  color: #707070;
-  font-size: 12px;
-  line-height: 1.66666666666667;
-  margin: 5px 0 0 0;
-}
-.form .description:first-child {
-  margin-top: 0;
-}
-.form .field-value {
-  display: inline-block;
-  font-weight: bold;
-  padding-top: 5px;
-}
-/* TODO: don't support this in AUI Forms 2 */
-.form legend {
-  display: none;
-}
-.field-group,
-.group,
-.date-select {
-  box-sizing: border-box;
-  clear: both;
-  padding: 4px 0 4px 160px;
-  position: relative;
-  margin: 1px 0;
-  width: 100%;
-}
-.group {
-  padding-top: 0;
-}
-.field-group:before,
-.field-group:after,
-.group:before,
-.group:after,
-.date-select:before,
-.date-select:after {
-  content: " ";
-  display: table;
-}
-.field-group:after,
-.form .group:after,
-.form .date-select:after {
-  clear: both;
-}
-.form legend,
-.field-group > label,
-.field-group > label {
-  float: left;
-  margin-left: -160px;
-  padding: 5px 0 0 0;
-  position: relative;
-  text-align: right;
-  width: 145px;
-  word-wrap: break-word;
-}
-
 
 .checkbox > label,
 .radio > label {
@@ -145,78 +75,8 @@
 .radio .error:first-child {
   margin-top: 0;
 }
-/* .group legend,
-.date-select legend {
-  display: block;
-} */
-.group .field-group,
-.date-select .field-group {
-  clear: none;
-  padding-left: 0;
-  padding-top: 0;
-}
-.date-select .field-group label {
-  display: none;
-}
-.form div.checkbox,
-.form div.radio {
-  margin: 5px 0 0 0;
-  padding: 0 0 0 20px;
-  position: relative;
-}
-.form legend + .field-group,
-.form legend + .checkbox,
-.form legend + .radio {
-  margin-top: 0;
-  padding-top: 5px;
-}
-.form div.checkbox:first-child,
-.form div.radio:first-child {
-  margin-top: 0;
-}
-.form .matrix {
-  padding-top: 5px;
-}
-.form div.radio input.radio,
-.form div.checkbox input.checkbox {
-  box-sizing: border-box;
-  font-size: 14px;
-  height: 1.4285714285714em;
-  left: 0;
-  margin: 0;
-  padding: 2px;
-  position: absolute;
-  vertical-align: baseline;
-}
 
-.buttons-container {
-  box-sizing: border-box;
-  clear: both;
-  margin: 1px 0 0 0;
-  padding: 4px 0 4px 145px;
-  position: relative;
-  width: 100%;
-}
-/* Long Labels
- * add long-label class to form eg: <form class="aui long-label">
- */
-.long-label .field-group,
-.long-label .group,
-.long-label .date-select,
-.long-label .buttons-container {
-  padding-left: 250px;
-}
-.long-label .field-group > label,
-.long-label .field-group > label,
-.long-label .group > legend {
-  margin-left: -250px;
-  width: 235px;
-}
-.long-label .group .field-group,
-.long-label .date-select .field-group {
-  padding-left: 0;
-}
-/* End Long Labels */
+
 /* Top Labels
  * add top-label class to form eg: <form class="aui top-label">
  * display all forms with top-labels for screen sizes < 768px
@@ -251,3 +111,5 @@
 .top-label .buttons-container {
   padding-left: 0;
 }
+
+

@@ -28,15 +28,13 @@ $gray-lightest:             #f5f5f5;
 
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             #3572b0;
-$brand-primary-darken:      #205081;
-$brand-primary-lighter:     #000;
-$brand-primary-lightest:    #9cbad9;
+$brand-primary:             #3273DC;
+$brand-primary-darken:      #3273DC;
 
-$brand-success:             #14892C;
-$brand-info:                #4A6785;
-$brand-warning:             #F6C342;
-$brand-danger:              #D04437;
+$brand-success:             #23D160;
+$brand-info:                #4A6785; //
+$brand-warning:             #FFDD57;
+$brand-danger:              #FF3860;
 $brand-moved:               #815B3A;
 
 // Options
@@ -76,4 +74,13 @@ $font-size-small:       12px;
 $font-family-mono:      Consolas, "Liberation Mono", monospace;
 $font-size-mono:        13px;
 
+// Responsive breakpoints
+$size-xs: 480px !default;
+$size-sm: 600px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1280px !default;
+$size-2x: 1440px !default;
 
+// Columns
+$column-gap: .5rem;
