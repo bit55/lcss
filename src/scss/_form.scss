@@ -1,11 +1,12 @@
 /*! Forms */
 
-.required {
+.-required:after {
   display:inline-block;
   color: darken($brand-danger, 20%);
   content:'*';
-  width:1em;
-  height:1em;
+  //width:1em;
+  //height:1em;
+  margin-left: .25em;
 }
 
 .form {
