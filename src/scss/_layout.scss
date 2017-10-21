@@ -31,7 +31,7 @@
 .nav__link {
   color: #fff;
   display: block;
-  line-height: 1;
+  //line-height: 1;
   padding: 13px 10px;
   text-decoration:none;
 }
@@ -46,7 +46,7 @@
   color: #fff;
 }
 .nav__item .btn {
-  margin:5px;
+  margin:8px;
 }
 .nav__item .btn.-primary .icon {
   color:#eee;
@@ -55,8 +55,8 @@
 
 /*! Logo */
 .logo {
-  height:40px;
-  float: left;
+  // height:40px;
+  // float: left;
   margin-left:20px;
   margin-right:20px;
 }
@@ -64,7 +64,7 @@
   /* padding:0; */
   color: #ffffff;
   vertical-align:middle;
-  line-height:40px;
+  line-height:46px;
   font-weight:bold;
   text-decoration:none;
 }
@@ -137,10 +137,6 @@
   top: 0;
   width: 16px;
 }
-
-
-
-
 
 .page-header {
     background-color: $gray-lightest;
