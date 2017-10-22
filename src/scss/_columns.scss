@@ -10,7 +10,7 @@
 }
 
 // Responsive grid system
-.columns {
+.cols {
   display: flex;
   flex-wrap: wrap;
   margin-left: -$column-gap;
@@ -18,9 +18,9 @@
 
   &.-gapless {
     margin-left: 0;
-    margin-right: 0;    
+    margin-right: 0;
 
-    & > .column {
+    & > .col {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0; 
@@ -35,7 +35,7 @@
   }
 }
 
-.column {
+.col {
   flex: 1;
   max-width: 100%;
   padding-left: $column-gap;
