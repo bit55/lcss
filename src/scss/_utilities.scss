@@ -28,3 +28,16 @@
       }
     }
 }
+
+
+::-moz-selection {
+	background-color: rgba(255,221,87, 0.8); /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
+
+::selection {
+	background-color: rgba(255,221,87, 0.8); /* 1 */
+	color: #000000; /* 1 */
+	text-shadow: none;
+}
