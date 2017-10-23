@@ -22,7 +22,7 @@
     margin-right: 0;
 
     & > .col, 
-		& > [class*="col-"] {
+    & > [class*="col-"] {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0; 
@@ -38,11 +38,11 @@
 }
 
 [class*="col-"] {
-	width: 100%;
+  width: 100%;
   padding-left: $column-gap;
   padding-right: $column-gap;
   padding-bottom: $column-gap*2;
-	flex: none;
+  flex: none;
 }
 
 @for $i from 12 through 1 {
@@ -136,17 +136,17 @@
 .col {
   flex: 1;
   max-width: 100%;
-	width:auto;
+  width:auto;
   padding-left: $column-gap;
   padding-right: $column-gap;
   padding-bottom: $column-gap*2; 
 }
 .col-narrow {
-	flex: none;
+  flex: none;
 }
 .col-tiled {
-	display: flex;
-	align-items: stretch;
+  display: flex;
+  align-items: stretch;
 }
 
 

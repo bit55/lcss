@@ -152,7 +152,7 @@ a.btn.-compact,
 .btn.-primary[disabled]:hover,
 .btn.-primary[disabled]:focus,
 .btn.-primary[disabled]:active {
-  background: darken($brand-primary, 20);
+  background: lighten($brand-primary, 20);
   border-color: transparent;
   box-shadow: none;
   color: #fff;
