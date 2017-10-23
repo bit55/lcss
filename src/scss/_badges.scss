@@ -26,6 +26,16 @@
   border-radius: 2em;
   border:none;
 }
+.badge.-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: #fff;
+}
+.badge.-primary.-subtle {
+  background-color: #fff;
+  border-color: $brand-primary;
+  color: $brand-primary;
+}
 .badge.-success {
   background-color: $brand-success;
   border-color: $brand-success;

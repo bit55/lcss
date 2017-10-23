@@ -10,7 +10,10 @@
   &:first-child {
     margin-top: 0;
   }
-  &.-success   {
+  &.-primary  {
+    background-color: lighten($brand-primary, 20%);
+  }  
+	&.-success   {
     background-color: lighten($brand-success, 10%);
   }
   &.-warning {
@@ -25,8 +28,6 @@
   &.-moved  {
     background-color: lighten($brand-moved, 20%);
   }
-  &.-primary  {
-    background-color: lighten($brand-primary, 20%);
-  }
+
 }
 
