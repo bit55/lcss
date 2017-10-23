@@ -21,11 +21,11 @@
 <div class="header">
   <div class="header-inner cols -gapless">
 
-    <div class="logo col col-1 col-sm-12">
-        <a class="logo__link" href="#">Example App</a>
+    <div class="col-md-2">
+        <div class="logo"><a class="logo__link" href="#">Example App</a></div>
     </div>
 
-    <ul class="nav col col-6 col-sm-12">
+    <ul class="nav col-md-6">
           <li class="nav__item"><a class="nav__link" href="#">First link</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Second link</a></li>
           <li class="nav__item"><a class="nav__link dropdown2-trigger" href="#">Second link</a></li>
@@ -34,13 +34,13 @@
           <li class="nav__item"><a href="#" class="btn -light"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
     </ul>
     
-    <div class="nav col col-sm-12">
+    <div class="nav col-md-2">
         <div class="qs">
             <input class="qs__input" type="text" placeholder="поиск..."/>
         </div>
     </div>
 
-    <ul class="nav col col-sm-12">
+    <ul class="nav col-md-2">
         <li class="nav__item"><a class="nav__link" href="#">Link 1 <span id="top-badge" class="badge -pill -danger">danger</span></a></li>
         <li class="nav__item"><a class="nav__link" href="#"><i class="ico-fa -mright fa-user-circle-o"></i> devg@ya.ru</a></li>
     </ul>
@@ -66,6 +66,29 @@
 
 <p>This is a test paragraph.</p>
 <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+
+
+<div class="cols mt-4">
+	<div class="col-md-12 col-lg-6"><div class="alert -warning">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+	<div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
+	<div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
+	<div class="col-md-12 col"><div class="alert -info">.col</div></div>
+</div>
+
+<!-- Downsize -->
+<div class="cols mt-4">
+	<div class="col-6 col-md-12"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+	<div class="col-2 col-md-6"><div class="alert">.col</div></div>
+	<div class="col-2"><div class="alert">.col</div></div>
+	<div class="col"><div class="alert">.col</div></div>       
+</div>
+
+<div class="cols mt-4">
+	<div class="col"><div class="alert">.col</div></div>
+	<div class="col"><div class="alert">.col</div></div>
+	<div class="col"><div class="alert">.col</div></div>       
+</div>
+
 
 <h2>This is 2nd level heading</h2>
 <h3>This is 3rd level heading</h3>
