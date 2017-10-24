@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body class="app-body">
 
 <div class="header">
   <div class="header-inner cols -gapless">
@@ -60,7 +60,7 @@
   </div>
 </header>
 
-<div style="padding:20px">
+<div class="container">
 
 <h1>This is 1st level heading</h1>
 
@@ -69,24 +69,24 @@
 
 
 <div class="cols mt-4">
-	<div class="col-md-12 col-lg-6"><div class="alert -warning">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
-	<div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
-	<div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
-	<div class="col-md-12 col"><div class="alert -info">.col</div></div>
+  <div class="col-md-12 col-lg-6"><div class="alert -warning">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+  <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
+  <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
+  <div class="col-md-12 col"><div class="alert -info">.col</div></div>
 </div>
 
 <!-- Downsize -->
 <div class="cols mt-4">
-	<div class="col-6 col-md-12"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
-	<div class="col-2 col-md-6"><div class="alert">.col</div></div>
-	<div class="col-2"><div class="alert">.col</div></div>
-	<div class="col"><div class="alert">.col</div></div>       
+  <div class="col-6 col-md-12"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+  <div class="col-2 col-md-6"><div class="alert">.col</div></div>
+  <div class="col-2"><div class="alert">.col</div></div>
+  <div class="col"><div class="alert">.col</div></div>       
 </div>
 
 <div class="cols mt-4">
-	<div class="col"><div class="alert">.col</div></div>
-	<div class="col"><div class="alert">.col</div></div>
-	<div class="col"><div class="alert">.col</div></div>       
+  <div class="col"><div class="alert">.col</div></div>
+  <div class="col"><div class="alert">.col</div></div>
+  <div class="col"><div class="alert">.col</div></div>       
 </div>
 
 
@@ -141,7 +141,7 @@
     <span class="badge -success">success</span>
     <span class="badge -danger">danger</span>
     <span class="badge -warning">warning</span>
-		<span class="badge -primary">primary</span>
+    <span class="badge -primary">primary</span>
     <span class="badge -info">info</span>
     <span class="badge -moved">moved</span>
 </p>
@@ -150,7 +150,7 @@
     <span class="badge -subtle -success">success</span>
     <span class="badge -subtle -danger">danger</span>
     <span class="badge -subtle -warning">warning</span>
-		<span class="badge -subtle -primary">primary</span>
+    <span class="badge -subtle -primary">primary</span>
     <span class="badge -subtle -info">info</span>
     <span class="badge -subtle -moved">moved</span>
 </p>
@@ -298,79 +298,79 @@
             </div>
         </div>
     </form>
-		
+    
     <fieldset>
         <legend><span>Fieldset</span></legend>
-		</fieldset>
-		
+    </fieldset>
+    
     <h3>Dropdowns and multi select</h3>
 
-		<div class="form-group cols">
-				<label for="dBase" class="col-md-1 form-label">Dropdown</label>
-				<div class="col">
-					<select class="select" id="dBase" name="dBase" title="database select">
-							<option>Select</option>
-							<option>Option 1</option>
-							<option>Option 2</option>
-							<optgroup label="Group 1">
-									<option>Option one</option>
-									<option>Option two</option>
-							</optgroup>
-							<option>Option 3</option>
-							<option>Option 4</option>
-					</select>
-				</div>
-		</div>
-		<div class="form-group cols">
-				<label for="multiselect" class="col-md-1 form-label">Multi select</label>
-				<div class="col">
-					<select class="select" size="4" multiple="multiple" id="multiselect" name="multiselect">
-							<option>option one</option>
-							<option>option two</option>
-							<option>option three</option>
-							<option>option four</option>
-							<option>option five</option>
-							<option>option six</option>
-					</select>
-					<div class="form-text">Multi select description</div>
-				</div>				
-		</div>
-		
-		<h3>Textarea</h3>
-		<div class="form-group cols">
-			<label for="comment" class="col-md-1 form-label">Comment</label>
-			<div class="col">
-				<textarea class="textarea" name="comment" id="comment" placeholder="Your comment here..."></textarea>
-			</div>
-		</div>
-		<div class="form-group cols">
-			<label for="licenseKey" class="col-md-1 form-label">License key</label>
-			<div class="col">
-				<textarea class="textarea" rows="6" cols="10" name="licenseKey" id="licenseKey"></textarea>
-			</div>
-		</div>
+    <div class="form-group cols">
+        <label for="dBase" class="col-md-1 form-label">Dropdown</label>
+        <div class="col">
+          <select class="select" id="dBase" name="dBase" title="database select">
+              <option>Select</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <optgroup label="Group 1">
+                  <option>Option one</option>
+                  <option>Option two</option>
+              </optgroup>
+              <option>Option 3</option>
+              <option>Option 4</option>
+          </select>
+        </div>
+    </div>
+    <div class="form-group cols">
+        <label for="multiselect" class="col-md-1 form-label">Multi select</label>
+        <div class="col">
+          <select class="select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+              <option>option one</option>
+              <option>option two</option>
+              <option>option three</option>
+              <option>option four</option>
+              <option>option five</option>
+              <option>option six</option>
+          </select>
+          <div class="form-text">Multi select description</div>
+        </div>        
+    </div>
+    
+    <h3>Textarea</h3>
+    <div class="form-group cols">
+      <label for="comment" class="col-md-1 form-label">Comment</label>
+      <div class="col">
+        <textarea class="textarea" name="comment" id="comment" placeholder="Your comment here..."></textarea>
+      </div>
+    </div>
+    <div class="form-group cols">
+      <label for="licenseKey" class="col-md-1 form-label">License key</label>
+      <div class="col">
+        <textarea class="textarea" rows="6" cols="10" name="licenseKey" id="licenseKey"></textarea>
+      </div>
+    </div>
     <div class="btns-container">
-			<div class="btns">
-					<input class="btn submit" value="Save" id="d-save-btn1" type="submit">
-					<a class="btn cancel" href="#">Cancel</a>
-			</div>
+      <div class="btns">
+          <input class="btn submit" value="Save" id="d-save-btn1" type="submit">
+          <a class="btn cancel" href="#">Cancel</a>
+      </div>
     </div>
 
     <h3>Radio buttons</h3>
     <fieldset class="group">
-			<legend><span>Radio buttons</span></legend>
-			<div class="radio">
-				<input class="radio" checked="checked" name="rads" id="irOne" type="radio">
-				<label for="irOne">Save as a blog post</label>
-			</div>
-			<div class="radio">
-				<input class="radio" name="rads" id="irTwo" type="radio">
-				<label for="irTwo">Save as a page</label>
-			</div>
-			<div class="radio">
-				<input class="radio" name="rads" id="irThree" type="radio">
-				<label for="irThree">Save to your drafts</label>
-			</div>
+      <legend><span>Radio buttons</span></legend>
+      <div class="radio">
+        <input class="radio" checked="checked" name="rads" id="irOne" type="radio">
+        <label for="irOne">Save as a blog post</label>
+      </div>
+      <div class="radio">
+        <input class="radio" name="rads" id="irTwo" type="radio">
+        <label for="irTwo">Save as a page</label>
+      </div>
+      <div class="radio">
+        <input class="radio" name="rads" id="irThree" type="radio">
+        <label for="irThree">Save to your drafts</label>
+      </div>
     </fieldset>
 
     <h3>Checkboxes</h3>
@@ -439,44 +439,44 @@
     <h3>Tabs</h3>
 
     <div class="cols">
-		
-			<div class="col-sm-6">
-				<ul class="tabs -lined">
-					<li class="tabs__item"><a class="tabs__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
-					<li class="tabs__item"><a class="tabs__link" href="#">Tab 2</a></li>
-					<li class="tabs__item"><a class="tabs__link" href="#">Tab 3</a></li>
-					<li class="tabs__item"><a class="tabs__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
-				</ul>
-			</div>
+    
+      <div class="col-sm-6">
+        <ul class="tabs -lined">
+          <li class="tabs__item"><a class="tabs__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#">Tab 2</a></li>
+          <li class="tabs__item"><a class="tabs__link" href="#">Tab 3</a></li>
+          <li class="tabs__item"><a class="tabs__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+      </div>
 
-			<div class="col-sm-6">
-				<ul class="tabs2 -lined">
-					<li class="tabs2__item"><a class="tabs2__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
-					<li class="tabs2__item"><a class="tabs2__link" href="#">Tab 2</a></li>
-					<li class="tabs2__item"><a class="tabs2__link" href="#">Tab 3</a></li>
-					<li class="tabs2__item"><a class="tabs2__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
-				</ul>
-			</div>
+      <div class="col-sm-6">
+        <ul class="tabs2 -lined">
+          <li class="tabs2__item"><a class="tabs2__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs2__item"><a class="tabs2__link" href="#">Tab 2</a></li>
+          <li class="tabs2__item"><a class="tabs2__link" href="#">Tab 3</a></li>
+          <li class="tabs2__item"><a class="tabs2__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+      </div>
 
-			<div class="col-sm-6">
-				<ul class="tabs3 -lined">
-					<li class="tabs3__item"><a class="tabs3__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
-					<li class="tabs3__item"><a class="tabs3__link" href="#">Tab 2</a></li>
-					<li class="tabs3__item"><a class="tabs3__link" href="#">Tab 3</a></li>
-					<li class="tabs3__item"><a class="tabs3__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
-				</ul>
-			</div>
+      <div class="col-sm-6">
+        <ul class="tabs3 -lined">
+          <li class="tabs3__item"><a class="tabs3__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs3__item"><a class="tabs3__link" href="#">Tab 2</a></li>
+          <li class="tabs3__item"><a class="tabs3__link" href="#">Tab 3</a></li>
+          <li class="tabs3__item"><a class="tabs3__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+      </div>
 
-			<div class="col-sm-6">
-				<ul class="tabs4 -lined">
-					<li class="tabs4__item"><a class="tabs4__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
-					<li class="tabs4__item"><a class="tabs4__link" href="#">Tab 2</a></li>
-					<li class="tabs4__item"><a class="tabs4__link" href="#">Tab 3</a></li>
-					<li class="tabs4__item"><a class="tabs4__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
-				</ul>
-			</div>
-		
-		</div>
+      <div class="col-sm-6">
+        <ul class="tabs4 -lined">
+          <li class="tabs4__item"><a class="tabs4__link -active" href="#"><i class="ico-fa fa-pencil -mright"></i>Tab 1</a></li>
+          <li class="tabs4__item"><a class="tabs4__link" href="#">Tab 2</a></li>
+          <li class="tabs4__item"><a class="tabs4__link" href="#">Tab 3</a></li>
+          <li class="tabs4__item"><a class="tabs4__link -active" href="#">Tab 4 <span class="badge -pill">2</span></a></li>
+        </ul>
+      </div>
+    
+    </div>
 
     <h3>Alerts</h3>
     
@@ -519,8 +519,6 @@
       <div class="col col-md-2 col-sm-6"><div class="alert -info">.col</div></div>
       <div class="col"><div class="alert -danger"><input type="text" class="input"></div></div>       
     </div>
-    
-        
 </div>
 
 </div>

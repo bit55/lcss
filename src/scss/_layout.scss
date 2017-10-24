@@ -13,6 +13,31 @@
   clear: both;
 }
 
+/* Content container wrapper */
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* Sticky footer */
+.app-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.app-content {
+  padding-top:20px;
+  padding-bottom:20px;
+  flex: 1;
+}
+.app-footer {
+  padding: 0.5rem 20px;
+  background:rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
 
 /*! Nav */
 .nav {
