@@ -1,10 +1,7 @@
 /*! Icons */
 
-
-
 .ico-fa {
   display: inline-block;
-  vertical-align: middle;
   text-align: center;
   color:inherit;
   width: auto;
@@ -28,4 +25,8 @@
 .ico-fa.-mleft {
   margin-left:0.5em;
   margin-right:0;
+}
+
+.ico-fa.-loading {
+  animation: loading 2s infinite linear;
 }

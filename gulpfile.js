@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var del = require('del');
 var runSequence = require('run-sequence');
 var postcss = require('gulp-postcss');
+var csscomb = require('gulp-csscomb');
 
 gulp.paths = {
     dist: 'dist',
@@ -35,9 +36,11 @@ gulp.task('copy:css', function() {
 gulp.task('postcss', function () {
     var contextOptions = { modules: true };
     return gulp.src(paths.dist+'/css/*.css')
+        .pipe(csscomb())
         .pipe(postcss(contextOptions))
         .pipe(gulp.dest(paths.dist+'/css'));
 });
+
 
 gulp.task('copy:js', function() {
    return gulp.src('./src/js/**/*')

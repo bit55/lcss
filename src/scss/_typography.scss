@@ -27,11 +27,11 @@ h1, h2, h3, h4, h5,
   color: $gray-dark;
   font-weight: normal;
   text-transform: none;
-  margin: 30px 0 0 0;
+  margin: 1rem 0 0.7rem 0;
 }
 
 h1 {  
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.25;
 }
 h2 {
@@ -45,13 +45,13 @@ h3 {
 h4 {
   font-size: 16px;
   line-height: 1.25;
-  margin: 20px 0 0 0;
+  margin: 1rem 0 0 0;
 }
 h5 {
   font-size: 14px;
   font-weight: bold;
   line-height: $line-height-base;
-  margin: 20px 0 0 0;
+  margin: 1rem 0 0 0;
 }
 h6 {
   color: #707070;
@@ -59,7 +59,7 @@ h6 {
   font-weight: bold;
   line-height: 1.66666667;
   text-transform: uppercase;
-  margin: 20px 0 0 0;
+  margin: 1rem 0 0 0;
 }
 h1:first-child, h2:first-child, h3:first-child, 
 h4:first-child, h5:first-child, h6:first-child {
@@ -109,9 +109,9 @@ cite:before {
   content: "\2014 \2009";
 }
 blockquote {
-  border-left: 1px solid #ccc;
+  border-left: 0.25rem solid #ccc;
   color: #707070;
-  margin-left: 19px;
+  //margin-left: 19px;
   padding: .7rem 20px;
 }
 blockquote > cite {

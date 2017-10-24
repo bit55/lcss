@@ -5,7 +5,7 @@ a.btn,
 .btn:visited {
   background: $gray-lightest;
   border: 1px solid #ccc;
-  border-radius: 3.01px;
+  border-radius: $border-radius;
   color: $gray-dark;
   cursor: pointer;
   display: inline-block;
@@ -19,7 +19,7 @@ a.btn,
   margin: 0;
   padding: 4px 10px;
   text-decoration: none;
-  vertical-align: baseline;
+  vertical-align: middle;
   white-space: nowrap;
 }
 /* .btn ~ .btn {

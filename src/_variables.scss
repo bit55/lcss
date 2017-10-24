@@ -40,31 +40,15 @@ $brand-moved:               #815B3A;
 // Options
 //
 
-// This variable affects the `.h-*` and `.w-*` classes.
-/* $sizes: (
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%
-) !default; */
-
 // Body
-//
-// Settings for the `<body>` element.
-
 $body-bg:       #fff !default;
 $body-color:    $gray-dark !default;
 
-// Links
-//
-// Style anchor elements.
-
-$link-color:            $brand-primary;
-$link-decoration:       underline !default;
-//$link-hover-color:      darken($link-color, 5%) !default;
-$link-hover-decoration: underline !default;
 
 
+
+
+// Typography
 $font-family-base:      Roboto, Arial, sans-serif !default;
 $font-size-base:        14px;
 $line-height-base:      1.42857142857143;// 1/0.7
@@ -73,6 +57,16 @@ $font-size-small:       12px;
 
 $font-family-mono:      Consolas, "Liberation Mono", monospace;
 $font-size-mono:        13px;
+
+// Links
+$link-color:            $brand-primary;
+$link-decoration:       underline !default;
+//$link-hover-color:      darken($link-color, 5%) !default;
+$link-hover-decoration: underline !default;
+
+// Buttons
+$border-radius:         3px !default;
+
 
 // Responsive breakpoints
 $size-xs: 480px !default;

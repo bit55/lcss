@@ -12,11 +12,10 @@
   box-sizing: border-box;
   font-size: inherit;
   margin: 0;
-  max-width: 250px;
-  vertical-align: baseline;
+  //max-width: 250px;
+  vertical-align: middle;
   width: 100%;
 
-  height: 2.14285714em;
   line-height: 1.4285714285714;
   padding: 4px 5px;
 }
@@ -28,11 +27,6 @@
   
 }
 
-.select {
-  padding: 6px 5px 5px 5px;
-  /* Firefox doesn't allow line-height to be adjusted and selects break horribly when the font-family is changed. Using padding instead */
-  vertical-align: top;
-}
 .textarea,
 .select[size],
 .multi-select {
