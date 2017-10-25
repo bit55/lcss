@@ -57,7 +57,7 @@
   color: #fff;
   display: block;
   //line-height: 1;
-  padding: 13px 10px;
+  padding: 13px 14px;
   text-decoration:none;
 }
 .nav__link:visited,
@@ -66,10 +66,15 @@
 .nav__link:active {
   text-decoration: none;
 }
-.nav__link:hover, .nav__link.-active {
-  background-color: #3b73af;
-  color: #fff;
+.nav__link.-active {
+  background-color: rgba(0,0,0,0.5);
+  color: $brand-warning;
 }
+.nav__link:hover {
+  background-color: rgba(0,0,0,0.3);
+  color: $gray-light;
+}
+
 .nav__item .btn {
   margin:8px;
 }
