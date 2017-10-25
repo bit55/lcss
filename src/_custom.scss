@@ -1,1 +1,53 @@
 // Place here your custom styles
+
+// Other helpers
+.text-muted {
+  color:#999 !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.text-primary {
+    color: #2C3E50 !important;
+}
+a.text-primary:focus, a.text-primary:hover {
+    color: #1a252f !important;
+}
+.text-danger {
+    color: #E74C3C !important;
+}
+a.text-danger:focus, a.text-danger:hover {
+    color: #d62c1a !important;
+}
+
+
+.float-right {
+  float:right;
+}
+
+.table-bordered {
+    border: 1px solid #b4bcc2;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+.table-inverse {
+    color: #fff;
+    background-color: #373a3c;
+}
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: #ecf0f1;
+}
+.table th, .table td {
+    padding: 0.5rem 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #b4bcc2;
+}
