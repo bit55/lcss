@@ -14,7 +14,7 @@ gulp.paths = {
 var paths = gulp.paths;
 
 gulp.task('sass', function () {
-    return gulp.src('./src/build.scss')
+    return gulp.src('./src/main.scss')
         .pipe(sass())
         .pipe(gulp.dest(paths.dist+'/css'));
 });
