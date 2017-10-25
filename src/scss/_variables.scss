@@ -1,9 +1,58 @@
-// Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
+// General variables
 
+// Colors
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+$yellow: #ffd500 !default;
+$green:  #5cb85c !default;
+$blue:   #0275d8 !default;
+$teal:   #5bc0de !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+// Create grayscale
+$gray-dark:                 #222 !default;
+$gray:                      #ccc !default;
+$gray-light:                #eee !default;
+$gray-lighter:              #f1f1f1 !default;
+$gray-lightest:             #f5f5f5 !default;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             #3273DC !default;
+$brand-primary-darken:      #3273DC !default;
+
+$brand-success:             #23D160 !default;
+$brand-info:                #4A6785 !default; //
+$brand-warning:             #FFDD57 !default;
+$brand-danger:              #FF3860 !default;
+$brand-moved:               #815B3A !default;
+
+// Body
+$body-bg:       #fff !default;
+$body-color:    $gray-dark !default;
+
+// Typography
+$font-family-base:      Roboto, Arial, sans-serif !default;
+$font-size-base:        14px !default;
+$line-height-base:      1.42857142857143 !default;// 1/0.7
+
+$font-size-small:       12px !default;
+
+$font-family-mono:      Consolas, "Liberation Mono", monospace !default;
+$font-size-mono:        13px !default;
+
+// Links
+$link-color:            $brand-primary !default;
+$link-decoration:       underline !default;
+//$link-hover-color:      darken($link-color, 5%) !default;
+$link-hover-decoration: underline !default;
+
+// Buttons
+$border-radius:         3px !default;
+
+// Spacing
 $spacer:   1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
@@ -28,4 +77,15 @@ $spacers: (
     x: ($spacer-x * 1.42857142857143),
     y: ($spacer-y * 1.42857142857143)
   )
-);
+) !default;
+
+// Responsive breakpoints
+$size-xs: 480px !default;
+$size-sm: 600px !default;
+$size-md: 840px !default;
+$size-lg: 960px !default;
+$size-xl: 1280px !default;
+$size-2x: 1440px !default;
+
+// Columns
+$column-gap: .35rem !default;
