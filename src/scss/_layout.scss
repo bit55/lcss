@@ -75,6 +75,10 @@
   color: $gray-light;
 }
 
+.nav__link .badge {
+  vertical-align:inherit;
+}
+
 .nav__item .btn {
   margin:8px;
 }
