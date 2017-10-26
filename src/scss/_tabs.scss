@@ -1,50 +1,41 @@
 /*! Tabs */
 
+// default style
 .tabs {
   margin: 0 0 14px 0;
   padding:0px;
   padding-left:8px;
   position: relative;
-  background:#EEF2F2;
-  border-radius: 3px;
+}
+.tabs.-underscored {
+  border-bottom: 1px solid #ddd;
+}
+.tabs.-bordered {
+  padding:3px;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 .tabs__item {
-  margin: 0;
+  margin: 2px 0 -1px 0;
   display:inline-block;
 }
 .tabs__link {
   display: block;
   text-decoration: none;
   padding:6px 8px;
+  border-bottom: 3px solid transparent;
 }
 .tabs__link:hover {
-  background-color: rgba(0,0,0,0.1);
+  /* background:#EEF2F2; */
   color: #333;
   text-decoration: none;
 }
 .tabs__link.-active, .tabs__link.-active:hover{
-  background-color: $brand-primary;
-  color: #fff;
+  color: #333;
+  border-bottom: 3px solid $brand-primary;
 }
-
-.tabs2 {
-  margin: 0 0 14px 0;
-  padding:0px;
-  padding-left:8px;
-  position: relative;
-}
-.tabs2.-lined {
-  border-bottom: 1px solid #ddd;
-}
-.tabs2__item {
-  margin: 0;
-  display:inline-block;
-  margin-top:2px;
-  margin-bottom:-1px;
-  //font-family: 'Open Sans', sans-serif;
-  //font-size: 14px;
-}
-.tabs2__link {
+// -----------------
+// classic style
+.tabs.-classic .tabs__link {
   display: block;
   text-decoration: none;
   padding:4px 7px;
@@ -56,7 +47,7 @@
   border-top-left-radius:3px;
   border-top-right-radius:3px;
 }
-.tabs2__link:hover {
+.tabs.-classic .tabs__link:hover {
   color: $gray-dark;
   text-decoration: none;
   border-left: 1px solid #ddd;
@@ -65,7 +56,8 @@
   border-bottom: 1px solid #ddd;
   background: #F7F7F7;
 }
-.tabs2__link.-active, .tabs2__link.-active:hover{
+.tabs.-classic .tabs__link.-active, 
+.tabs.-classic .tabs__link.-active:hover{
   background: #fff;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
@@ -73,65 +65,54 @@
   border-bottom: 1px solid transparent;
   color: #333;
 }
-.tabs2__link.-grey.-active, .tabs2__link.-grey.-active:hover {
+.tabs.-classic .tabs2__link.-grey.-active, 
+.tabs.-classic .tabs2__link.-grey.-active:hover {
   background: $gray-lightest;
 }
 
-.tabs3 {
-  margin: 0 0 14px 0;
-  padding:0px;
-  padding-left:8px;
-  position: relative;
+// rectangular style
+.tabs.-rect {
+  background:rgba(0, 0, 0, 0.05);
 }
-.tabs3.-lined {
-  border-bottom: 1px solid #ddd;
-}
-.tabs3__item {
+.tabs.-rect .tabs__item {
   margin: 0;
-  display:inline-block;
-  margin-top:2px;
-  margin-bottom:-1px;
 }
-.tabs3__link {
-  display: block;
-  text-decoration: none;
-  padding:6px 8px;
-  border-bottom: 3px solid transparent;
-}
-.tabs3__link:hover {
-  /* background:#EEF2F2; */
-  color: #333;
-  text-decoration: none;
-}
-.tabs3__link.-active, .tabs3__link.-active:hover{
-  color: #333;
-  border-bottom: 3px solid $brand-primary;
-}
-
-.tabs4 {
-  margin: 0 0 14px 0;
-  padding:0px;
+.tabs.-rect .tabs__link {
   padding:3px 8px;
+  border:none;
+}
+.tabs.-rect .tabs__link:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+.tabs.-rect .tabs__link.-active, 
+.tabs.-rect .tabs__link.-active:hover{
+  background-color: $brand-primary;
+  color: #fff;
+}
+// rounded style
+.tabs.-rounded {
+  margin: 0 0 14px 0;
+  padding:3px;
   position: relative;
-  background:#EEF2F2;
+  background:rgba(0, 0, 0, 0.05);
   border-radius: 6px;
 }
-.tabs4__item {
+
+.tabs.-rounded .tabs__item {
   margin: 0;
-  display:inline-block;
 }
-.tabs4__link {
+.tabs.-rounded .tabs__link {
   display: block;
   text-decoration: none;
-  padding:2px 8px;
+  padding:3px 8px;
   border-radius: 3px;
+  border: none;
 }
-.tabs4__link:hover {
+.tabs.-rounded .tabs__link:hover {
   background-color: rgba(0,0,0,0.1);
-  color: #333;
-  text-decoration: none;
 }
-.tabs4__link.-active, .tabs4__link.-active:hover{
+.tabs.-rounded .tabs__link.-active, 
+.tabs.-rounded .tabs__link.-active:hover{
   background-color: $brand-primary;
   color: #fff;
 }
