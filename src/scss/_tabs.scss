@@ -14,6 +14,9 @@
   padding:3px;
   border: 1px solid rgba(0,0,0,0.1);
 }
+.tabs.-with-bg {
+  background:rgba(0, 0, 0, 0.05);
+}
 .tabs__item {
   margin: 2px 0 -1px 0;
   display:inline-block;
@@ -71,9 +74,6 @@
 }
 
 // rectangular style
-.tabs.-rect {
-  background:rgba(0, 0, 0, 0.05);
-}
 .tabs.-rect .tabs__item {
   margin: 0;
 }
@@ -91,10 +91,7 @@
 }
 // rounded style
 .tabs.-rounded {
-  margin: 0 0 14px 0;
-  padding:3px;
-  position: relative;
-  background:rgba(0, 0, 0, 0.05);
+  padding: 3px;
   border-radius: 6px;
 }
 
@@ -104,9 +101,9 @@
 .tabs.-rounded .tabs__link {
   display: block;
   text-decoration: none;
-  padding:3px 8px;
+  padding:2px 7px;
   border-radius: 3px;
-  border: none;
+  border: 1px solid transparent;
 }
 .tabs.-rounded .tabs__link:hover {
   background-color: rgba(0,0,0,0.1);
@@ -114,5 +111,6 @@
 .tabs.-rounded .tabs__link.-active, 
 .tabs.-rounded .tabs__link.-active:hover{
   background-color: $brand-primary;
+  border: 1px solid rgba(0,0,0,0.1);
   color: #fff;
 }

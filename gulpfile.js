@@ -6,6 +6,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var postcss = require('gulp-postcss');
 var csscomb = require('gulp-csscomb');
+var csso = require('gulp-csso');
 
 gulp.paths = {
     dist: 'dist',
@@ -38,6 +39,11 @@ gulp.task('postcss', function () {
     return gulp.src(paths.dist+'/css/*.css')
         .pipe(csscomb())
         .pipe(postcss(contextOptions))
+        .pipe(csso({
+            restructure: true,
+            sourceMap: false,
+            debug: false
+        }))
         .pipe(gulp.dest(paths.dist+'/css'));
 });
 
