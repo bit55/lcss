@@ -75,7 +75,7 @@ a {
   color: $link-color;
   text-decoration: $link-decoration;
 }
-a:focus, a:hover, a:active {
+/* a:focus,  */a:hover, a:active {
   text-decoration: $link-hover-decoration;
 }
 
