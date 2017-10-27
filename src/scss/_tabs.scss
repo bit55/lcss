@@ -4,7 +4,6 @@
 .tabs {
   margin: 0 0 14px 0;
   padding:0px;
-  padding-left:8px;
   position: relative;
 }
 
@@ -29,10 +28,13 @@
 }
 // -----------------
 // classic style
+.tabs.-classic {
+  padding-left:8px;
+}
 .tabs.-classic .tabs__link {
   display: block;
   text-decoration: none;
-  padding:4px 7px;
+  padding:4px 10px;
   //padding-top:2px;
   border-bottom: 1px solid transparent;
   border-left: 1px solid #fff;
@@ -65,9 +67,9 @@
 }
 
 // rectangular style
-.tabs.-rect {
-  padding: 0;
-}
+// .tabs.-rect {
+  // padding: 0;
+// }
 .tabs.-rect .tabs__item {
   margin: 0;
 }
@@ -85,7 +87,11 @@
 }
 // rounded style
 .tabs.-rounded {
-  padding: 0;
+  //padding: 0;
+  border-radius: 3px;
+}
+.tabs.-rounded.-bordered {
+  //padding: 0;
   border-radius: 6px;
 }
 
