@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  
+
   <style>
       @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=cyrillic');
   </style>
   <link rel="stylesheet" href="../dist/css/font-awesome.css" />
   <link rel="stylesheet" href="../dist/css/main.css" />
-  
+
   <script src="https://yastatic.net/jquery/1.8.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
   <script src="example.js"></script>
@@ -33,7 +33,7 @@
         <li class="nav__item"><a href="#" class="btn -primary"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
         <li class="nav__item"><a href="#" class="btn -light"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
     </ul>
-    
+
     <div class="nav col-md-2">
         <div class="qs">
             <input class="qs__input" type="text" placeholder="поиск..."/>
@@ -56,7 +56,7 @@
       <button class="btn -subtle">Cancel</button>
     </div>
     <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
-    
+
   </div>
 </header>
 
@@ -93,7 +93,7 @@
 <h2>This is 2nd level heading</h2>
 <h3>This is 3rd level heading</h3>
 <h4>This is 4th level heading</h4>
-<h5>This is 5th level heading</h5>
+<h5 class="mb-2">This is 5th level heading</h5>
 <h6>This is 6th level heading</h6>
 
 <p>This is a test paragraph.</p>
@@ -160,8 +160,8 @@
 <cite>Use the <code>.-pill</code> modifier class to make badges more rounded (with a larger border-radius).</cite>
 <hr>
   <p>Inbox <span class="badge -pill">1</span></p>
-  
-  <p>Colored badge 
+
+  <p>Colored badge
   <span class="badge -pill">default &times;</span>
     <span class="badge -pill -success">success</span>
     <span class="badge -pill -danger">danger</span>
@@ -193,29 +193,29 @@
 
 <h2>Buttons</h2>
 <p>
-  <button class="btn">Button</button> 
-  <a href="#" class="btn">Button as link</a> 
+  <button class="btn">Button</button>
+  <a href="#" class="btn">Button as link</a>
   <a href="#" class="btn -primary">Button as link 2</a>
   <button class="btn -primary">Primary button</button>
   <button class="btn -light">Light button </button>
-  
+
   <br><br>
-  
+
   <button class="btn"><span class="ico-fa -mright fa-cog -loading" aria-hidden="true"></span> Iconed button</button>
   <button class="btn"><span class="ico-fa -mright fa-spinner -loading" aria-hidden="true"></span> Iconed button</button>
   <button class="btn"><span class="ico-fa -mright fa-bar-chart" aria-hidden="true"></span> Iconed button</button>
-  
+
   <br><br>
-  
+
   <button class="btn"><i class="ico-fa fa-check"></i> Iconed button</button>
   <button class="btn"><i class="ico-fa fa-pencil"></i> Iconed button</button>
   <button class="btn"><i class="ico-fa fa-edit"></i> Iconed button</button>
-  
+
   <br><br>
-  
+
   <button class="btn" disabled>Disabled button</button>
   <button class="btn -subtle">Cancel</button>
-  
+
   <button class="btn"><span class="fa-cog ico-fa"></span></button>
   <button class="btn -subtle"><span class="fa-cog ico-fa"></span>  Subtle button</button>
   <button class="btn" disabled>Disabled button</button>
@@ -233,15 +233,15 @@
 
 <p>
   <div class="btns">
-    <button class="btn">Button <span class="fa-ellipsis-h ico-fa -mleft"></span></button> 
+    <button class="btn">Button <span class="fa-ellipsis-h ico-fa -mleft"></span></button>
     <a href="#" class="btn">Button as link</a>
   </div>
   <div class="btns">
-    <button class="btn">Button</button> 
-    <button class="btn">Button</button>     
+    <button class="btn">Button</button>
+    <button class="btn">Button</button>
     <button class="btn" disabled>Disabled button</button>
   </div>
-  
+
   <div class="dropdown -right">
     <a href="#" class="btn dropdown-toggle" onclick="return false">
       Dropdown menu <i class="ico-fa fa-caret-down -mleft"></i>
@@ -258,13 +258,13 @@
 
 
 <form action="#" method="post" id="d1" class="form">
-  
+
   <div class="form-group cols -gapless">
       <label for="d-fname" class="col-md-1 form-label -required">Default field<!--span class="required"></span--></label>
       <div class="col">
         <input class="input" id="d-fname" name="d-fname" title="first name" type="text">
         <div class="form-text">Default width input of a required field</div>
-      </div>          
+      </div>
   </div>
   <div class="form-group cols -gapless">
       <label for="d-fname" class="col-md-1 form-label -required">Short field<span class="required"></span></label>
@@ -272,19 +272,19 @@
         <input class="input short-field" id="d-fname" name="d-fname" title="first name" type="text">
         <div class="text -danger">danger message here</div>
         <div class="form-text">Default width input of a required field</div>
-      </div>          
+      </div>
   </div>
   <div class="form-group cols -gapless">
       <label for="d-fname" class="col-md-1 form-label -required">Long field</label>
       <div class="col">
         <input class="input long-field" id="d-fname" name="d-fname" title="first name" type="text">
-      </div>          
+      </div>
   </div>
   <div class="form-group cols -gapless">
       <label for="email1" class="col-md-1 form-label">Default field</label>
       <div class="col">
-        <input class="input medium-field" id="email1" name="email" title="email" placeholder="you@example.com" type="text"> 
-      </div>          
+        <input class="input medium-field" id="email1" name="email" title="email" placeholder="you@example.com" type="text">
+      </div>
   </div>
 </form>
 
@@ -339,7 +339,7 @@
           <option>option six</option>
       </select>
       <div class="form-text">Multi select description</div>
-    </div>        
+    </div>
 </div>
 
 <h3>Textarea</h3>
@@ -413,22 +413,22 @@
 
 <div class="cols">
   <div class="col-sm-3">
-    <div class="card"><div class="card-block text-center">-default</div></div>
+    <h5>default</h5><hr>
   </div>
   <div class="col-sm-3">
-    <div class="card"><div class="card-block text-center">-classic</div></div>
+    <h5>-classic</h5><hr>
   </div>
   <div class="col-sm-3">
-    <div class="card"><div class="card-block text-center">-rect</div></div>
+    <h5>-rect</h5><hr>
   </div>
   <div class="col-sm-3">
-    <div class="card"><div class="card-block text-center">-rounded</div></div>
+    <h5>-rounded</h5><hr>
   </div>
 </div>
 
 <div class="cols">
   <div class="col-sm-3">
-    <ul class="tabs -underscored">
+    <ul class="tabs">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
@@ -436,17 +436,17 @@
       <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
     </ul>
   </div>
-  
+
   <div class="col-sm-3">
-    <ul class="tabs -classic -underscored">
+    <ul class="tabs -classic">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
     </ul>
   </div>
-  
+
   <div class="col-sm-3">
     <ul class="tabs -rect">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
@@ -456,7 +456,7 @@
       <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
     </ul>
   </div>
-  
+
   <div class="col-sm-3">
     <ul class="tabs -rounded">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
@@ -468,63 +468,12 @@
   </div>
 </div>
 
-<div class="cols">
-  <div class="col">
-    <div class="card"><div class="card-block text-center">-with-bg</div></div>
-  </div> 
-</div>
-  
-<div class="cols">
-  <div class="col-sm-3">
-    <ul class="tabs -underscored -with-bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -classic -underscored -with-bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rect -with-bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rounded -with-bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-</div>
+
 
 <div class="cols">
-  <div class="col">
-    <div class="card"><div class="card-block text-center">-with-bg -bordered</div></div>
-  </div> 
-</div>
-  
-<div class="cols">
   <div class="col-sm-3">
-    <ul class="tabs -underscored -with-bg -bordered">
+    <h5 class="mb-2">-bg</h5>
+    <ul class="tabs -bg">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
@@ -532,47 +481,21 @@
       <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
     </ul>
   </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -classic -underscored -with-bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rect -with-bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rounded -with-bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-</div>
 
-<div class="cols">
-  <div class="col">
-    <div class="card"><div class="card-block text-center"> -underscored</div></div>
-  </div> 
-</div>
-  
-<div class="cols">
   <div class="col-sm-3">
-    <ul class="tabs">
+    <h5 class="mb-2">-classic -topline</h5>
+    <ul class="tabs -classic -topline">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-rect -bg</h5>
+    <ul class="tabs -rect -bg">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
@@ -580,29 +503,10 @@
       <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
     </ul>
   </div>
-  
+
   <div class="col-sm-3">
-    <ul class="tabs -classic">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rect -underscored">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
-    </ul>
-  </div>
-  
-  <div class="col-sm-3">
-    <ul class="tabs -rounded -underscored">
+    <h5 class="mb-2">-rounded -bg</h5>
+    <ul class="tabs -rounded -bg">
       <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
@@ -614,6 +518,119 @@
 
 
 
+<div class="cols">
+  <div class="col-sm-3">
+    <h5 class="mb-2"> -underlined -bg -bordered</h5>
+    <ul class="tabs -underlined -bg -bordered">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-classic -topline -gray</h5>
+    <ul class="tabs -classic -topline -gray">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-rect -bg -bordered</h5>
+    <ul class="tabs -rect -bg -bordered">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-rounded -bg -bordered</h5>
+    <ul class="tabs -rounded -bg -bordered">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="cols">
+  <div class="col-sm-3">
+    <h5 class="mb-2">-underlined</h5>
+    <ul class="tabs -underlined">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-classic -gray</h5>
+    <ul class="tabs -classic -gray">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-rect -underlined</h5>
+    <ul class="tabs -rect -underlined">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  <div class="col-sm-3">
+    <h5 class="mb-2">-rounded -underlined</h5>
+    <ul class="tabs -rounded -underlined">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="cols">
+  <div class="col-sm-3">
+    <h5 class="mb-2">-underlined -narrow</h5>
+    <ul class="tabs -underlined -narrow">
+      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge -pill">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico-fa fa-plus -mright"></i>Create</a></li>
+    </ul>
+  </div>
+
+  
+</div>
+
+<hr>
 <h3>Alerts</h3>
 
 <div class="cols hide-md">

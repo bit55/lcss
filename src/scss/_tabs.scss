@@ -7,8 +7,7 @@
   position: relative;
 }
 
-.tabs__item {
-  margin: 2px 0 -1px 0;
+.tabs__item {  
   display:inline-block;
 }
 .tabs__link {
@@ -18,7 +17,6 @@
   border-bottom: 3px solid transparent;
 }
 .tabs__link:hover {
-  /* background:#EEF2F2; */
   color: #333;
   text-decoration: none;
 }
@@ -26,10 +24,18 @@
   color: #333;
   border-bottom: 3px solid $brand-primary;
 }
+
+.tabs.-underlined .tabs__item {
+  margin-bottom: -1px;
+}
 // -----------------
 // classic style
 .tabs.-classic {
   padding-left:8px;
+  border-bottom: 1px solid #ddd;
+}
+.tabs.-classic .tabs__item {
+  margin-bottom: -1px;
 }
 .tabs.-classic .tabs__link {
   display: block;
@@ -61,10 +67,18 @@
   border-bottom: 1px solid transparent;
   color: #333;
 }
-.tabs.-classic .tabs2__link.-grey.-active, 
-.tabs.-classic .tabs2__link.-grey.-active:hover {
-  background: $gray-lightest;
+.tabs.-topline .tabs__link {
+  padding:1px 8px 2px 8px;
+  border-top: 3px solid transparent;
 }
+.tabs.-topline .tabs__link:hover {
+  border-top: 3px solid #ddd;
+}
+.tabs.-topline .tabs__link.-active:hover,
+.tabs.-topline .tabs__link.-active {
+  border-top: 3px solid #555;
+}
+
 
 // rectangular style
 // .tabs.-rect {
@@ -103,7 +117,7 @@
   text-decoration: none;
   padding:2px 7px;
   border-radius: 3px;
-  border: 1px solid transparent;
+  border:none;
 }
 .tabs.-rounded .tabs__link:hover {
   background-color: rgba(0,0,0,0.1);
@@ -111,17 +125,37 @@
 .tabs.-rounded .tabs__link.-active, 
 .tabs.-rounded .tabs__link.-active:hover{
   background-color: $brand-primary;
-  border: 1px solid rgba(0,0,0,0.1);
   color: #fff;
 }
 
-.tabs.-underscored {
+.tabs.-gray .tabs__link.-active, 
+.tabs.-gray .tabs__link.-active:hover {
+  background: $gray-lightest;
+}
+.tabs.-narrow .tabs__item {
+  margin-right:1rem;
+}
+.tabs.-narrow .tabs__link {
+  padding-left: 0;
+  padding-right: 0;
+}
+// .tabs.-narrow .tabs__link.-active{
+  // font-weight: bold;
+// }
+
+
+.tabs.-underlined {
   border-bottom: 1px solid #ddd;
+}
+.-rect.-underlined, .-rounded.-underlined {
+  padding-bottom: 3px;
+  border-bottom: 2px solid $brand-primary;
+  border-radius: 0;
 }
 .tabs.-bordered {
   padding:3px;
   border: 1px solid rgba(0,0,0,0.1);
 }
-.tabs.-with-bg {
+.tabs.-bg {
   background:rgba(0, 0, 0, 0.05);
 }
