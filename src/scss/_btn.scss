@@ -34,16 +34,17 @@ a.btn:focus {
 }
 
 /* Firefox doesn't add OS focus border if there is a button outline, so we add one ourselves */
-.btn:focus {
-  outline: 1px dotted $gray-dark;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: 1px;
-}
+// .btn:focus {
+  // outline: 1px dotted $gray-dark;
+  // outline: 5px auto -webkit-focus-ring-color;
+  // outline-offset: 1px;
+// }
+
 /* Control button height in Firefox. See http://www.experimentgarden.com/2010/11/firefox-buttontext-height-and-padding.html */
-.btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+// .btn::-moz-focus-inner {
+  // border: 0;
+  // padding: 0;
+// }
 
 .btn.-light,
 a.btn.-light,
