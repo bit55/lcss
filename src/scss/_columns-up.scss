@@ -7,7 +7,7 @@
 .show-md,
 .show-lg,
 .show-xl {
-  display: none !important;
+  display: none;
 }
 
 // Responsive grid system
@@ -76,10 +76,10 @@
     }
   }
   .hide-xs {
-    display: none !important;
+    display: none;
   }
   .show-xs {
-    display: block !important;
+    display: block;
   }
 }
 @media (min-width: $size-sm) {
@@ -89,10 +89,10 @@
     }
   }
   .hide-sm {
-    display: none !important;
+    display: none;
   }
   .show-sm {
-    display: block !important;
+    display: block;
   }
 }
 @media (min-width: $size-md) {
@@ -102,10 +102,10 @@
     }
   }
   .hide-md {
-    display: none !important;
+    display: none;
   }
   .show-md {
-    display: block !important;
+    display: block;
   }
 }
 @media (min-width: $size-lg) {
@@ -115,10 +115,10 @@
     }
   }
   .hide-lg {
-    display: none !important;
+    display: none;
   }
   .show-lg {
-    display: block !important;
+    display: block;
   }
 }
 @media (min-width: $size-xl) {
@@ -128,10 +128,10 @@
     }
   }  
   .hide-xl {
-    display: none !important;
+    display: none;
   }
   .show-xl {
-    display: block !important;
+    display: block;
   }
 }
 

@@ -44,7 +44,6 @@
 .nav {
   margin: 0;
   padding: 0;
-  float: left;
 }
 .nav.-right {
   float: right;
@@ -92,14 +91,15 @@
 .logo {
   // height:40px;
   // float: left;
-  margin-left:20px;
-  margin-right:20px;
+  padding-left: 20px;
+  padding-right: 9px;
+  position: relative;
 }
 .logo__link {
   /* padding:0; */
   color: #ffffff;
   vertical-align:middle;
-  line-height:46px;
+  line-height: 46px;
   font-weight:bold;
   text-decoration:none;
 }
@@ -108,6 +108,42 @@
   padding: 0;
   /* height:40px; */
   vertical-align:middle;
+}
+
+// Nav menu open btn.
+.mb {
+    height: 46px;
+    width: 40px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    float: right;
+}
+.mb__icon {
+    -webkit-transition: background-position .2s;
+    transition: background-position .2s;
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-size: 200%;
+    background-position: -18px 0;
+    background-repeat:repeat-y;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAMCAMAAAD2+gsPAAAAGFBMVEX////vOwAyO0U8RE7vRQulqa6kqK34qZZ4GblrAAAAM0lEQVQoz2PgYGEkAFjYWZmZCABmNgaC5gBNImgO0CQGRiIAExGAegZRzWtUC+xRMAQBAC5tAtEjTbzNAAAAAElFTkSuQmCC")
+}
+.mb:hover .mb__icon,
+.mb:active .mb__icon {
+    background-position: -18px 6px
+}
+
+@media (max-width: $size-md) {
+  .nav__item {
+    float:none;
+    padding:0 7px;
+  }
 }
 
 /**

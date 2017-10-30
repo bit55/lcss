@@ -22,16 +22,19 @@
   <div class="header-inner cols -gapless">
 
     <div class="col-md-2">
-        <div class="logo"><a class="logo__link" href="#">Example App</a></div>
+        <div class="logo">
+          <a class="logo__link" href="#">Example App</a>
+          <div class="mb hide-md"><a href="#" class="mb__icon" onclick="$('#responsive-nav').toggleClass('show-md')"></a></div>
+        </div>
+        
     </div>
 
-    <ul class="nav col-md-6">
+    <ul id="responsive-nav" class="nav col-md-6 show-md">
         <li class="nav__item"><a class="nav__link" href="#badges">Badges</a></li>
         <li class="nav__item"><a class="nav__link" href="#buttons">Buttons</a></li>
         <li class="nav__item"><a class="nav__link" href="#forms">Forms</a></li>
         <li class="nav__item"><a class="nav__link" href="#tabs">Tabs</a></li>
-        <li class="nav__item"><a href="#" class="btn -primary">Button</a></li>
-        <li class="nav__item"><a href="#" class="btn -primary"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
+        <li class="nav__item"><a href="#" class="btn -primary">Button</a><a href="#" class="btn -primary"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
         <li class="nav__item"><a href="#" class="btn -light"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
     </ul>
 
@@ -75,7 +78,7 @@
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
     <h4>This is 4th level heading</h4>
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h5 class="mb-2">This is 5th level heading</h5>
+    <h5>This is 5th level heading</h5>
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
     <h6>This is 6th level heading</h6>
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
@@ -698,6 +701,12 @@
 
 </div>
 </div>
-</div>
+
+
+<footer class="app-footer text-center">
+  LCSS v1.0+
+</footer>
+
+
 </body>
 </html>
