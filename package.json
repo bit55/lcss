@@ -1,6 +1,6 @@
 {
   "name": "lcss",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "dependencies": {},
   "devDependencies": {
     "cssnano": "^3.10.0",
