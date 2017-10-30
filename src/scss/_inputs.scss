@@ -21,6 +21,7 @@
 .textarea:focus,
 .select:focus {
   border-color: darken($brand-warning, 20%);
+  outline:none;
 }
 
 .textarea,

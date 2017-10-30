@@ -12,8 +12,8 @@ a.btn,
   font-family: inherit;
   font-size: $font-size-base;
   font-weight: normal;
-  height: 2.14285714em; /* 30px - using ems so the fields increase in line with user specified font-sizes */  
-  line-height: 1.42857143; /* 20px */
+  //height: 2.14285714em; /* 30px - using ems so the fields increase in line with user specified font-sizes */  
+  line-height: $line-height-base; /* 20px */
   
   margin: 0;
   padding: 4px 10px;
@@ -46,7 +46,7 @@ a.btn.-light,
 a.btn.-compact,
 .btn:visited.-compact {
   font-size: 0.8em;
-  height: 2.16667em;
+  //height: 2.16667em;
   padding: 2px 8px;
 }
 
@@ -77,6 +77,10 @@ a.btn.-compact,
   color: #000;
   text-decoration: none;
 }
+.btn:focus {
+  outline: none;
+}
+
 
 .btn:active,
 .btn.active {
