@@ -36,12 +36,12 @@ $body-color:    $gray-dark !default;
 // Typography
 $font-family-base:      Roboto, Arial, sans-serif !default;
 $font-size-base:        14px !default;
-$line-height-base:      1.42857142857143 !default;// 1/0.7
+$line-height-base:      1.429 !default;// 1/0.7
 
-$font-size-small:       12px !default;
+$font-size-small:       0.85em !default;
 
 $font-family-mono:      Consolas, "Liberation Mono", monospace !default;
-$font-size-mono:        13px !default;
+$font-size-mono:        0.9em !default;
 
 // Links
 $link-color:            $brand-primary !default;
@@ -74,15 +74,15 @@ $spacers: (
     y: $spacer-y
   ),
   4: (
-    x: ($spacer-x * 1.42857142857143),
-    y: ($spacer-y * 1.42857142857143)
+    x: ($spacer-x * 1.429),
+    y: ($spacer-y * 1.429)
   )
 ) !default;
 
 // Responsive breakpoints
 $size-xs: 480px !default;
-$size-sm: 600px !default;
-$size-md: 840px !default;
+$size-sm: 560px !default;
+$size-md: 768px !default;
 $size-lg: 960px !default;
 $size-xl: 1280px !default;
 $size-2x: 1440px !default;

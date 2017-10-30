@@ -15,20 +15,16 @@
   margin: 0;
 }
 .btns .btn:first-child {
-  border-top-left-radius: 3.01px;
-  border-bottom-left-radius: 3.01px;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
 }
 .btns .btn:last-child {
-  border-top-right-radius: 3.01px;
-  border-bottom-right-radius: 3.01px;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
-.btns + .btns {
+/* .btns + .btns {
   margin-left: 10px;
-}
-/* Grouped buttons go into toolbar style */
-/* .btns .btn {
-  border-color: #999;
 } */
 .btns .btn[disabled],
 .btns .btn[disabled]:hover,
@@ -39,7 +35,6 @@
 /* Grouped Primary Buttons */
 .btns .btn ~ .btn {
   border-left-width: 0;
-  padding-left: 11px;
 }
 .btns .btn ~ .btn:hover,
 .btns .btn ~ .btn:focus,

@@ -6,32 +6,27 @@
   background: #fff;
   color: $gray-dark;
   font-family: inherit;
-  font-size: 14px;
+  //font-size: $font-size-base;
   border: 1px solid #ccc;
-  border-radius: 3.01px;
+  border-radius: $border-radius;
   box-sizing: border-box;
-  font-size: inherit;
   margin: 0;
-  //max-width: 250px;
   vertical-align: middle;
   width: 100%;
-
-  line-height: 1.4285714285714;
-  padding: 4px 5px;
+  //line-height: $line-height-base;
+  padding: 4px;
 }
 
 .input:focus,
 .textarea:focus,
 .select:focus {
-  border-color: #999;
-  
+  border-color: darken($brand-warning, 20%);
 }
 
 .textarea,
-.select[size],
-.multi-select {
+.select[size] {
   height: auto;
-  line-height: 1.4285714285714;
+  //line-height: $line-height-base;
   margin: 0;
   padding: 4px 5px;
 }
@@ -43,24 +38,19 @@
 .input[disabled],
 .textarea[disabled],
 .select[disabled],
-.multi-select[disabled],
 .select[disabled] option,
-.select[disabled] optgroup,
-.multi-select[disabled] option,
-.multi-select[disabled] optgroup {
+.select[disabled] optgroup {
   background-color: $gray-lightest;
   color: #999;
 }
 .input[disabled],
 .textarea[disabled],
-.select[disabled],
-.multi-select[disabled] {
+.select[disabled] {
   color: #999;
 }
 .input[disabled],
 .textarea[disabled],
 .select[disabled],
-.multi-select[disabled],
 .radio[disabled],
 .checkbox[disabled] {
   cursor: not-allowed;

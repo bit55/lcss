@@ -16,9 +16,9 @@
   <script src="example.js"></script>
 </head>
 
-<body class="app-body">
+<body class="app-body" style="">
 
-<div class="header">
+<div class="header" style="/*position:fixed; top:0;left:0;right:0*/">
   <div class="header-inner cols -gapless">
 
     <div class="col-md-2">
@@ -26,9 +26,10 @@
     </div>
 
     <ul class="nav col-md-6">
-        <li class="nav__item"><a class="nav__link" href="#">First link</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Second link</a></li>
-        <li class="nav__item"><a class="nav__link dropdown2-trigger" href="#">Second link</a></li>
+        <li class="nav__item"><a class="nav__link" href="#badges">Badges</a></li>
+        <li class="nav__item"><a class="nav__link" href="#buttons">Buttons</a></li>
+        <li class="nav__item"><a class="nav__link" href="#forms">Forms</a></li>
+        <li class="nav__item"><a class="nav__link" href="#tabs">Tabs</a></li>
         <li class="nav__item"><a href="#" class="btn -primary">Button</a></li>
         <li class="nav__item"><a href="#" class="btn -primary"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
         <li class="nav__item"><a href="#" class="btn -light"><span class="fa-cog ico-fa -mright"></span>With icon</a></li>
@@ -61,44 +62,64 @@
 </header>
 
 <div class="container app-content">
+<div class="cols">
+  <div class="col">
+    <h1>This is 1st level heading</h1>
 
-<h1>This is 1st level heading</h1>
+    <p>This is a test paragraph.</p>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <h2>This is 2nd level heading</h2>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <h3>This is 3rd level heading</h3>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <h4>This is 4th level heading</h4>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <h5 class="mb-2">This is 5th level heading</h5>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <h6>This is 6th level heading</h6>
+    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
 
-<p>This is a test paragraph.</p>
-<p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <p>This is a last paragraph in container.</p>
+  </div>
+  <div class="col">
+    <h1>This is 1st level heading</h1>
+    <h2>This is 2nd level heading</h2>
+    <h3>This is 3rd level heading</h3>
+    <h4>This is 4th level heading</h4>
+    <h5>This is 5th level heading</h5>
+    <h6>This is 6th level heading</h6>
+  </div>
+</div>
+<hr>
 
 
-<div class="cols mt-4">
-  <div class="col-md-12 col-lg-6"><div class="alert -warning">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+
+
+<div class="cols">
+  <div class="col-md-12 col-lg-6"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
   <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
   <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
-  <div class="col-md-12 col"><div class="alert -info">.col</div></div>
+  <div class="col-md-12 col"><div class="alert">.col</div></div>
 </div>
 
 <!-- Downsize -->
-<div class="cols mt-4">
+<div class="cols">
   <div class="col-6 col-md-12"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
   <div class="col-2 col-md-6"><div class="alert">.col</div></div>
   <div class="col-2"><div class="alert">.col</div></div>
   <div class="col"><div class="alert">.col</div></div>
 </div>
 
-<div class="cols mt-4">
+<div class="cols">
   <div class="col"><div class="alert">.col</div></div>
   <div class="col"><div class="alert">.col</div></div>
   <div class="col"><div class="alert">.col</div></div>
 </div>
-
-
-<h2>This is 2nd level heading</h2>
-<h3>This is 3rd level heading</h3>
-<h4>This is 4th level heading</h4>
-<h5 class="mb-2">This is 5th level heading</h5>
-<h6>This is 6th level heading</h6>
-
-<p>This is a test paragraph.</p>
 <hr>
-<p style="background:#999;height:1rem"></p>
+
+
+
 <p>This is a test paragraph.</p>
 
 <blockquote>Blockquote</blockquote>
@@ -134,7 +155,7 @@
 </code>
 </pre>
 
-<h2>Badges</h2>
+<h2 id="badges">Badges</h2>
 
 <p>
     <span class="badge">default</span>
@@ -191,7 +212,7 @@
 
 </p>
 
-<h2>Buttons</h2>
+<h2 id="buttons">Buttons</h2>
 <p>
   <button class="btn">Button</button>
   <a href="#" class="btn">Button as link</a>
@@ -254,34 +275,34 @@
 </p>
 
 
-<h2>Forms</h2>
+<h2 id="forms">Forms</h2>
 
 
 <form action="#" method="post" id="d1" class="form">
 
-  <div class="form-group cols -gapless">
-      <label for="d-fname" class="col-md-1 form-label -required">Default field<!--span class="required"></span--></label>
+  <div class="form-group cols">
+      <label for="d-fname" class="col w-240 form-label -required">Default field<!--span class="required"></span--></label>
       <div class="col">
         <input class="input" id="d-fname" name="d-fname" title="first name" type="text">
         <div class="form-text">Default width input of a required field</div>
       </div>
   </div>
-  <div class="form-group cols -gapless">
-      <label for="d-fname" class="col-md-1 form-label -required">Short field<span class="required"></span></label>
+  <div class="form-group cols">
+      <label for="d-fname" class="col w-240 form-label -required">Short field<span class="required"></span></label>
       <div class="col">
         <input class="input short-field" id="d-fname" name="d-fname" title="first name" type="text">
         <div class="text -danger">danger message here</div>
         <div class="form-text">Default width input of a required field</div>
       </div>
   </div>
-  <div class="form-group cols -gapless">
-      <label for="d-fname" class="col-md-1 form-label -required">Long field</label>
+  <div class="form-group cols">
+      <label for="d-fname" class="col w-240 form-label -required">Long field</label>
       <div class="col">
         <input class="input long-field" id="d-fname" name="d-fname" title="first name" type="text">
       </div>
   </div>
-  <div class="form-group cols -gapless">
-      <label for="email1" class="col-md-1 form-label">Default field</label>
+  <div class="form-group cols">
+      <label for="email1" class="col w-240 form-label">Default field</label>
       <div class="col">
         <input class="input medium-field" id="email1" name="email" title="email" placeholder="you@example.com" type="text">
       </div>
@@ -312,7 +333,7 @@
 <h3>Dropdowns and multi select</h3>
 
 <div class="form-group cols">
-    <label for="dBase" class="col-md-1 form-label">Dropdown</label>
+    <label for="dBase" class="col w-240 form-label">Dropdown</label>
     <div class="col">
       <select class="select" id="dBase" name="dBase" title="database select">
           <option>Select</option>
@@ -328,7 +349,7 @@
     </div>
 </div>
 <div class="form-group cols">
-    <label for="multiselect" class="col-md-1 form-label">Multi select</label>
+    <label for="multiselect" class="col w-240 form-label">Multi select</label>
     <div class="col">
       <select class="select" size="4" multiple="multiple" id="multiselect" name="multiselect">
           <option>option one</option>
@@ -344,13 +365,13 @@
 
 <h3>Textarea</h3>
 <div class="form-group cols">
-  <label for="comment" class="col-md-1 form-label">Comment</label>
+  <label for="comment" class="col w-240 form-label">Comment</label>
   <div class="col">
     <textarea class="textarea" name="comment" id="comment" placeholder="Your comment here..."></textarea>
   </div>
 </div>
 <div class="form-group cols">
-  <label for="licenseKey" class="col-md-1 form-label">License key</label>
+  <label for="licenseKey" class="col w-240 form-label">License key</label>
   <div class="col">
     <textarea class="textarea" rows="6" cols="10" name="licenseKey" id="licenseKey"></textarea>
   </div>
@@ -409,7 +430,7 @@
 <hr>
 
 
-<h3>Tabs</h3>
+<h2 id="tabs">Tabs</h2>
 
 <div class="cols">
   <div class="col-sm-3">

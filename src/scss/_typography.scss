@@ -1,24 +1,34 @@
 /*! Typography */
 html {
-    font-size: 14px;  
+    font-size: $font-size-base;
 }
 body {
   background: $body-bg;
   color: $gray-dark;
   font-family: $font-family-base;
-  font-size: $font-size-base;  
+  font-size: $font-size-base;
   line-height: $line-height-base;
 }
 /* Default margins */
-p, ul, ol, dl, h1, h2, h3, h4, h5, h6, 
+p, ul, ol, dl, h1, h2, h3, h4, h5, h6,
 blockquote, pre, form, table {
-  margin: .7rem 0 0 0;
+  margin: .67em 0 0;
 }
 /* No top margin to interfere with box padding */
-p:first-child, ul:first-child, ol:first-child, dl:first-child,
-h1:first-child, h2:first-child, h3:first-child, h4:first-child,
-h5:first-child, h6:first-child, blockquote:first-child,
-pre:first-child, form:first-child, table:first-child {
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+blockquote:first-child,
+pre:first-child,
+form:first-child,
+table:first-child {
   margin-top: 0;
 }
 /* Headings: desired line height in px / font size = unitless line height */
@@ -27,10 +37,10 @@ h1, h2, h3, h4, h5,
   color: $gray-dark;
   font-weight: normal;
   text-transform: none;
-  margin: 1rem 0 0.7rem 0;
+  margin: 1em 0 0.7em 0;
 }
 
-h1 {  
+h1 {
   font-size: 28px;
   line-height: 1.2;
 }
@@ -61,10 +71,12 @@ h6 {
   text-transform: uppercase;
   margin: 1rem 0 0 0;
 }
-h1:first-child, h2:first-child, h3:first-child, 
-h4:first-child, h5:first-child, h6:first-child {
-  margin-top: 0;
-}
+
+/* p:last-child {
+  margin-bottom: 0;
+} */
+
+
 /* Nice styles for using subheadings */
 h1 + h2, h2 + h3, h3 + h4,
 h4 + h5, h5 + h6 {
@@ -79,7 +91,7 @@ a {
   text-decoration: $link-hover-decoration;
 }
 
-  
+
 /* Other typographical elements */
 small {
   color: #707070;
@@ -98,7 +110,7 @@ code, kbd {
 pre code {
   color: #000;
   display: block;
-  padding: 1rem; 
+  padding: 1rem;
   overflow:auto;
 }
 
@@ -109,10 +121,11 @@ cite:before {
   content: "\2014 \2009";
 }
 blockquote {
-  border-left: 0.25rem solid #ccc;
-  color: #707070;
+  border-left: 0.25rem solid rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.05);
+  color: $gray-dark;
   //margin-left: 19px;
-  padding: .7rem 20px;
+  padding: .7em 1em;
 }
 blockquote > cite {
   display: block;
@@ -121,19 +134,20 @@ blockquote > cite {
 q { color: #707070; }
 q:before { content: open-quote; }
 q:after  { content: close-quote; }
+
 abbr {
   border-bottom: 1px #707070 dotted;
   cursor: help;
 }
 
-table { 
-  border-collapse:collapse; 
-  border-spacing:0; 
+table {
+  border-collapse:collapse;
+  border-spacing:0;
 }
 
 hr {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
   border:0;
   border-top: 1px dotted rgba(0, 0, 0, 0.1);
 }

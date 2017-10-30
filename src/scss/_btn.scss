@@ -10,7 +10,7 @@ a.btn,
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: 14px;
+  font-size: $font-size-base;
   font-variant: normal;
   font-weight: normal;
   height: 2.14285714em; /* 30px - using ems so the fields increase in line with user specified font-sizes */  
@@ -60,9 +60,9 @@ a.btn.-light,
 .btn.-compact,
 a.btn.-compact,
 .btn:visited.-compact {
-  font-size: 11px;
+  font-size: 0.8em;
   height: 2.16667em;
-  line-height: 1.66667;
+  //line-height: 1.66667;
   padding: 2px 8px;
 }
 

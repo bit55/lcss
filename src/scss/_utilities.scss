@@ -2,10 +2,24 @@
  * Utilities
  */
 
-
+// Clearfix
 .hidden { display:none !important;}
 .clearfix:before, .clearfix:after { content:""; display:table; }
 .clearfix:after { clear:both; }
+
+// Text selection
+::-moz-selection {
+  background-color: rgba(255,221,87, 0.8);
+  color: #000000;
+  text-shadow: none;
+}
+::selection {
+  background-color: rgba(255,221,87, 0.8);
+  color: #000000;
+  text-shadow: none;
+}
+
+
 
 /*! Spacing */
 @each $prop, $abbrev in (margin: m, padding: p) {
@@ -29,16 +43,10 @@
   }
 }
 
-// Text selection
-::-moz-selection {
-  background-color: rgba(255,221,87, 0.8);
-  color: #000000;
-  text-shadow: none;
-}
-::selection {
-  background-color: rgba(255,221,87, 0.8);
-  color: #000000;
-  text-shadow: none;
+/*! Sizing */
+.w-240 {
+  width: 240px;
+  flex: none;
 }
 
 // Animations

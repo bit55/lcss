@@ -2,7 +2,7 @@
 
 .-required:after {
   display:inline-block;
-  color: darken($brand-danger, 20%);
+  color: $brand-danger;
   content:'*';
   //width:1em;
   //height:1em;
@@ -10,22 +10,22 @@
 }
 
 .form {
-  margin: 20px 0 0 0;
+  margin: 1em 0 0 0;
   position: relative;
 }
 .form label {
-  color: #707070;
+  color: #555;
 }
 
 .form-group {
-  margin-bottom:1rem;
+  margin-bottom:1em;
 }
 .form-group:last-child {
   margin-bottom: 0;
 }
-.form-label {
-  margin-top:.35rem;
-}
+// .form-label {
+  // margin-top:.35em;
+// }
 
 .form-text {
   color: #707070;
