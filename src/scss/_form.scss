@@ -119,3 +119,13 @@
 .top-label .buttons-container {
   padding-left: 0;
 }
+
+fieldset {
+  border: 1px solid rgba(0,0,0,0.2);
+  padding:.5rem;
+}
+legend {
+  color:#777;
+  margin-left: 3px;
+  padding:0 4px;
+}
