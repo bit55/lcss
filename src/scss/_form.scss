@@ -102,24 +102,6 @@
   width: auto;
 }
 
-.top-label .group,
-.top-label .date-select {
-  padding-left: 0;
-}
-.top-label .group legend,
-.top-label .date-select legend {
-  float: none;
-  margin: 0;
-  text-align: left;
-  width: auto;
-}
-.top-label .date-select label {
-  display: none;
-}
-.top-label .buttons-container {
-  padding-left: 0;
-}
-
 fieldset {
   border: 1px solid rgba(0,0,0,0.2);
   padding:.5rem;

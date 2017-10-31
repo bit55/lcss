@@ -1,8 +1,1 @@
 
-$mobile: 768px;
-
-@mixin mobile {
-  @media screen and (max-width: $mobile - 1px) {
-    @content
-  }   
-}

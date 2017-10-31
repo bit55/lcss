@@ -11,7 +11,7 @@ $(function() {
       $(fileInput).parent('.btn-upload').find('span').html(defaultLabel);
     }
 
-    fileNames = [];        
+    fileNames = [];
 
     if (e.target.files.length) {
       for (i=0; i < e.target.files.length; i++) {
@@ -31,9 +31,19 @@ $(function() {
 });
 // tabs
 $(function() {
-  $('.tabs__link').click(function(e) { 
+  $('.tabs__link').click(function(e) {
     e.preventDefault();
     $(this).parent().parent().find('.tabs__link').removeClass('-active');
     $(this).addClass('-active');
+  });
+
+
+  $('.nav-trigger').click(function(e) {
+    $('#responsive-nav').toggleClass('show-md');
+    if (!$('#responsive-nav').hasClass('show-md')) {
+      $('.nav-trigger').addClass('nav-is-visible');
+    } else {
+      $('.nav-trigger').removeClass('nav-is-visible');
+    }
   });
 });

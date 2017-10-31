@@ -114,39 +114,80 @@
   vertical-align:middle;
 }
 
-// Nav menu open btn.
-.mb {
-    height: 46px;
-    width: 40px;
-    display: inline-block;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    float: right;
-}
-.mb__icon {
-    -webkit-transition: background-position .2s;
-    transition: background-position .2s;
-    position: absolute;
-    top: 13px;
-    left: 11px;
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-size: 200%;
-    background-position: -18px 0;
-    background-repeat:repeat-y;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAMCAMAAAD2+gsPAAAAGFBMVEX////vOwAyO0U8RE7vRQulqa6kqK34qZZ4GblrAAAAM0lEQVQoz2PgYGEkAFjYWZmZCABmNgaC5gBNImgO0CQGRiIAExGAegZRzWtUC+xRMAQBAC5tAtEjTbzNAAAAAElFTkSuQmCC")
-}
-.mb:hover .mb__icon,
-.mb:active .mb__icon {
-    background-position: -18px 6px
-}
-
 @media (max-width: $size-md) {
   .nav__item {
     float:none;
     padding:0 7px;
+  }
+}
+
+.nav-trigger {
+  /* navigation trigger - visible on mobile devices only */
+  float: right;
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 46px;
+  margin-right: 5px;
+  /* hide text */
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  cursor:pointer;
+}
+.nav-trigger span, 
+.nav-trigger span::before, 
+.nav-trigger span::after {
+  /* hamburger icon in CSS */
+  position: absolute;
+  display: inline-block;
+  height: 2px;
+  width: 24px;
+  background: #ffffff;
+}
+.nav-trigger span {
+  /* line in the center */
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -1px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.nav-trigger span::before, .nav-trigger span::after {
+  /* other 2 lines */
+  content: '';
+  right: 0;
+  /* Force Hardware Acceleration in WebKit */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-origin: 0% 50%;
+  transition: transform 0.2s;
+}
+.nav-trigger span::before {
+  top: -6px;
+}
+.nav-trigger span::after {
+  top: 6px;
+}
+.nav-trigger.nav-is-visible span {
+  /* hide line in the center */
+  background: rgba(255, 255, 255, 0);
+}
+.nav-trigger.nav-is-visible span::before, .nav-trigger.nav-is-visible span::after {
+  /* keep visible other 2 lines */
+  background: white;
+}
+.nav-trigger.nav-is-visible span::before {
+  transform: translateX(3px) translateY(-3px) rotate(45deg);
+}
+.nav-trigger.nav-is-visible span::after {
+  transform: translateX(3px) translateY(2px) rotate(-45deg);
+}
+@media (min-width: $size-md) {
+  .nav-trigger {
+    display: none;
   }
 }
 
