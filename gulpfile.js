@@ -57,4 +57,11 @@ gulp.task('build', function(callback) {
     runSequence('clean:dist', ['sass', 'copy:fonts', 'copy:js', 'copy:css'], 'postcss', callback);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('watch', function(callback) {
+    //gulp.watch('./src/**/*.scss', ['build']);
+    gulp.watch('./src/**/*.scss', function(callback) {
+        runSequence('sass', 'postcss', callback);
+    });
+});
+
+gulp.task('default', ['watch']);
