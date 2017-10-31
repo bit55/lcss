@@ -91,13 +91,11 @@
 
 //--- addit ---
 .btn .badge,
-.tabs .badge,
-.tabs2 .badge,
-.tabs4 .badge,
-.tabs3 .badge {
+.tabs .badge {
   //vertical-align: middle;
   background: rgba(0, 0, 0, 0.1);
   color: inherit;
   position: relative;
   top: -1px;
+  border: none;
 }
