@@ -6,7 +6,7 @@ $(function() {
   fileInput.addEventListener('change', function(e) {
 
     if (fileInput.value.substring(fileInput.value.lastIndexOf('.') + 1, fileInput.value.length).toLowerCase() != 'png') {
-      alert('Принимаются только файлы в формате PNG!');
+      alert('Only png files are accepted!');
       fileInput.value = null;
       $(fileInput).parent('.btn-upload').find('span').html(defaultLabel);
     }
@@ -46,4 +46,6 @@ $(function() {
       $('.nav-trigger').removeClass('nav-is-visible');
     }
   });
+
+  $('.tip').tooltips();
 });

@@ -58,10 +58,10 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('watch', function(callback) {
-    //gulp.watch('./src/**/*.scss', ['build']);
-    gulp.watch('./src/**/*.scss', function(callback) {
-        runSequence('sass', 'postcss', callback);
-    });
+    gulp.watch('./src/**/*.*', ['build']);
+    // gulp.watch('./src/**/*.scss', function(callback) {
+        // runSequence('sass', 'postcss', callback);
+    // });
 });
 
 gulp.task('default', ['watch']);

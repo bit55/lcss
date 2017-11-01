@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Example page</title>
 
   <style>
       @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=cyrillic');
@@ -13,6 +13,7 @@
 
   <script src="https://yastatic.net/jquery/1.8.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
+  <script src="../dist/js/app.js"></script>
   <script src="example.js"></script>
 </head>
 
@@ -56,8 +57,9 @@
     <p>Another text</p>
     <div class="breadcrumb"><a href="#">Bread</a> / <a href="#">crumb</a></div>
     <div class="page-header-right">
-      <button class="btn -subtle" onclick="$('#top-badge').toggleClass('hidden');">Top Badge</button>
-      <button class="btn -subtle">Cancel</button>
+      <button class="btn -subtle" onclick="$('#top-badge').toggleClass('hidden')">Top badge</button>
+      <button class="btn -subtle" href="/example/async.php" onclick="cms.ajaction(this);">Ajaction</button>
+      <button class="btn -subtle" onclick="cms.modal.alert('Hello message');cms.modal.alert('Hello message 2')">Show simple modal</button>
     </div>
     <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
 
@@ -68,8 +70,15 @@
 <div class="cols">
   <div class="col">
     <h1>This is 1st level heading</h1>
-
+    <button class="btn" onclick="cms.notice.show('Hello message')">Notice default</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','primary')">primary</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','success')">success</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','warning')">warning</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','danger')">danger</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','info')">info</button>
+    <button class="btn" onclick="cms.notice.show('Hello message','moved')">moved</button>
     <p>This is a test paragraph.</p>
+    
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
     <h2>This is 2nd level heading</h2>
@@ -134,7 +143,7 @@
 <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
 </ol>
 
-<p>This is a test paragraph.</p>
+<div class="t1-for-modal"><p>This is a test paragraph.</p>
 
 <ul>
 <li>One.</li>
@@ -145,7 +154,7 @@
 
 <p>This is a test paragraph with <code>code</code>.</p>
 
-<p>This is a test paragraph and <a href="#">link</a>, and <a href="#"target="_blank">link external</a>.</p>
+<p>This is a test paragraph and <a href="#">link</a>, and <a href="#" target="_blank">link external</a>.</p>
 <pre>
 <code>public static function danger404($msg = '')
 {
@@ -156,7 +165,7 @@
   exit;
 }
 </code>
-</pre>
+</pre></div>
 
 <h2 id="badges">Badges</h2>
 
@@ -216,7 +225,7 @@
 </p>
 
 <h2 id="buttons">Buttons</h2>
-<p>
+<div>
   <button class="btn">Button</button>
   <a href="#" class="btn">Button as link</a>
   <a href="#" class="btn -primary">Button as link 2</a>
@@ -227,7 +236,7 @@
 
   <button class="btn"><span class="ico-fa -mright fa-cog -loading" aria-hidden="true"></span> Iconed button</button>
   <button class="btn"><span class="ico-fa -mright fa-spinner -loading" aria-hidden="true"></span> Iconed button</button>
-  <button class="btn"><span class="ico-fa -mright fa-bar-chart" aria-hidden="true"></span> Iconed button</button>
+  <button class="btn"><span class="ico-fa -mright fa-bar-chart"></span> Iconed button</button>
 
   <br><br>
 
@@ -249,13 +258,13 @@
   <button class="btn -compact">Compact</button>
   <button class="btn -compact"><span class="ico-fa -mright fa-bars"></span> Compact</button>
   <button class="btn -compact -primary">Compact Primary</button>
-</p>
+</div>
 
 
 
 <h3>Buttons group</h3>
 
-<p>
+<div>
   <div class="btns">
     <button class="btn">Button <span class="fa-ellipsis-h ico-fa -mleft"></span></button>
     <a href="#" class="btn">Button as link</a>
@@ -274,8 +283,9 @@
       <a class="menu__item" href="#">Menuitem</a>
       <a class="menu__item" href="#">Menuitem</a>
     </div>
+  </div>
+  <button class="btn tip" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">Modal</button>
 </div>
-</p>
 
 
 <h2 id="forms">Forms</h2>
@@ -284,30 +294,30 @@
 <form action="#" method="post" id="d1" class="form">
 
   <div class="form-group cols">
-      <label for="d-fname" class="col w-240 form-label -required">Default field<!--span class="required"></span--></label>
+      <label class="col w-240 form-label -required">Default field<!--span class="required"></span--></label>
       <div class="col">
-        <input class="input" id="d-fname" name="d-fname" title="first name" type="text">
+        <input class="input" name="d-fname" title="first name" type="text">
         <div class="form-text">Default width input of a required field</div>
       </div>
   </div>
   <div class="form-group cols">
-      <label for="d-fname" class="col w-240 form-label -required">Short field<span class="required"></span></label>
+      <label class="col w-240 form-label -required">Short field<span class="required"></span></label>
       <div class="col">
-        <input class="input short-field" id="d-fname" name="d-fname" title="first name" type="text">
+        <input class="input short-field" name="d-fname" title="first name" type="text">
         <div class="text -danger">danger message here</div>
         <div class="form-text">Default width input of a required field</div>
       </div>
   </div>
   <div class="form-group cols">
-      <label for="d-fname" class="col w-240 form-label -required">Long field</label>
+      <label class="col w-240 form-label -required">Long field</label>
       <div class="col">
-        <input class="input long-field" id="d-fname" name="d-fname" title="first name" type="text">
+        <input class="input long-field" name="d-fname" title="first name" type="text">
       </div>
   </div>
   <div class="form-group cols">
-      <label for="email1" class="col w-240 form-label">Default field</label>
+      <label class="col w-240 form-label">Default field</label>
       <div class="col">
-        <input class="input medium-field" id="email1" name="email" title="email" placeholder="you@example.com" type="text">
+        <input class="input medium-field" name="email" title="email" placeholder="you@example.com" type="text">
       </div>
   </div>
 </form>
@@ -422,7 +432,7 @@
 
 <p>
 
-  <span href="#" title="прикрепить файлы" class="btn btn-upload">
+  <span title="прикрепить файлы" class="btn btn-upload">
     <i class="ico-fa fa-paperclip -mright"></i><span>Выбрать...</span>
     <input type="file" multiple="multiple" name="file" id="file" accept="image/gif, image/png">
   </span>
