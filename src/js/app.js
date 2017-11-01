@@ -298,7 +298,6 @@ var cms = {};
       }
     };
     xhr.onerror = function(e) {
-      //alert('Ошибка соединения, попробуйте еще раз'); //oldstyle alert
       if(typeof opts.error === 'function') opts.error();
     };
     return false;
