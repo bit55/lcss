@@ -1,16 +1,18 @@
 {
   "name": "lcss",
-  "version": "1.0.2",
-  "dependencies": {},
+  "version": "v2.0.0-beta",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1"
+  },
   "devDependencies": {
-    "cssnano": "^3.10.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-csscomb": "^3.0.8",
-    "gulp-csso": "^3.0.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^2.3.2",
-    "run-sequence": "^1.2.2"
+    "cssnano": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-csscomb": "*",
+    "gulp-csso": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*",
+    "run-sequence": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

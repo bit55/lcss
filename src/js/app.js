@@ -55,6 +55,7 @@ var cms = {};
   /**
    * Get a scrollbar width
    * @return {Number}
+   * //todo replace by https://www.npmjs.com/package/scrollbar-width
    */
   var getScrollbarWidth = function () {
       /* if ($(document.body).height() <= $(window).height()) {
@@ -209,20 +210,20 @@ var cms = {};
   cms.modal.alert = function(message, fn) {
     var modal =  new Modal('', fn, fn); // same callback
     modal.content.append('<div style="margin-bottom:1rem">'+message+'</div>');
-    modal.content.append('<div style="text-align:center"><button type="button" class="btn -primary mw__confirm">ОК</button></div>');modal.content.find(".mw__confirm").focus();
+    modal.content.append('<div class="text-center"><button type="button" class="btn btn-primary mw__confirm">ОК</button></div>');modal.content.find(".mw__confirm").focus();
     modal.open();
   };
   // confirm message
   cms.modal.confirm = function(message, fnConfirm, fnCancel) {
     var modal =  new Modal('', fnConfirm, fnCancel);
     modal.content.append('<div style="margin-bottom:1rem">'+message+'</div>');
-    modal.content.append('<div style="text-align:center"><button type="button" class="btn -primary mw__confirm">ОК</button> <button type="button" class="btn mw__cancel">Отмена</button></div>');
+    modal.content.append('<div class="text-center"><button type="button" class="btn btn-primary mw__confirm">ОК</button> <button type="button" class="btn mw__cancel">Отмена</button></div>');
     modal.content.find(".mw__confirm").focus();
     modal.open();
   };
 
   // open dialog
-  cms.modal.openAjax = function(url) {
+  cms.modal.openAjax = function(url) { //todo param showWait
     cms.modal.wait();
 
     $.get(url).done(function(data) {
@@ -514,7 +515,7 @@ cms.notice.hideAll = function () {
             top: '0',
             left: '0',
             right: '0',
-            zIndex: '100',
+            zIndex: 10000,
             background: '#FFDD57',
             transition: 'width 0.3s linear'
         }, styles);

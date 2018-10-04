@@ -21,13 +21,30 @@ gulp.task('sass', function () {
 });
 
 gulp.task('clean:dist', function () {
-    return del([paths.dist+'/fonts', paths.dist+'/css', paths.dist+'/js']);
+    return del([paths.dist+'/webfonts', paths.dist+'/fonts', paths.dist+'/css', paths.dist+'/js']);
 });
 
-gulp.task('copy:fonts', function() {
-   return gulp.src('./src/fonts/**/*')
+gulp.task('copy:webfonts', ['copy:webfonts-fa4', 'copy:webfonts-fa4css']);
+//gulp.task('copy:webfonts', ['copy:webfonts-fa5', 'copy:webfonts-fa5css']);
+
+gulp.task('copy:webfonts-fa4', function() {
+   return gulp.src('./src/font-awesome-4.7.0/fonts/**/*')
    .pipe(gulp.dest(paths.dist+'/fonts'));
 });
+gulp.task('copy:webfonts-fa4css', function() {
+   return gulp.src('./src/font-awesome-4.7.0/css/font-awesome.min.css')
+   .pipe(gulp.dest(paths.dist+'/css'));
+});
+
+gulp.task('copy:webfonts-fa5', function() {
+   return gulp.src('./node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
+   .pipe(gulp.dest(paths.dist+'/webfonts'));
+});
+gulp.task('copy:webfonts-fa5css', function() {
+   return gulp.src('./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css')
+   .pipe(gulp.dest(paths.dist+'/css'));
+});
+
 
 gulp.task('copy:css', function() {
    return gulp.src('./src/css/**/*')
@@ -54,7 +71,7 @@ gulp.task('copy:js', function() {
 });
 
 gulp.task('build', function(callback) {
-    runSequence('clean:dist', ['sass', 'copy:fonts', 'copy:js', 'copy:css'], 'postcss', callback);
+    runSequence('clean:dist', ['sass', 'copy:webfonts', 'copy:js', 'copy:css'], 'postcss', callback);
 });
 
 gulp.task('watch', function(callback) {
