@@ -48,4 +48,5 @@ $(function() {
   });
 
   $('.tip').tooltips();
+  $('[data-toggle="tooltip"]').tooltip();
 });

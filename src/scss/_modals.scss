@@ -14,9 +14,9 @@
     opacity: 0;
     transition: opacity 0.1s linear;
     
-    // &.-transparent {
-      // background: transparent;
-    // }
+    &.-transparent {
+      background: transparent;
+    }
 }
 html.mw-locked .mw__overlay {
     opacity: 1; /* overlay animation */

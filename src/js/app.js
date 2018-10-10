@@ -109,11 +109,11 @@ var cms = {};
    */
   Modal.prototype.buildDOM = function () {
       this.body = $(document.body);
-      //if (!isScreenLocked) {
+      if (!isScreenLocked) {
         this.overlay = $("<div>").addClass("mw__overlay");
-      //} else {
-      //  this.overlay = $("<div>").addClass("mw__overlay -transparent");
-      //}
+      } else {
+        this.overlay = $("<div>").addClass("mw__overlay -transparent");
+      }
       this.content = $('<div class="mw__content"></div>');
       this.overlay.append(this.content);
       this.body.append(this.overlay);
