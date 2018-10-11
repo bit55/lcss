@@ -4,9 +4,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var del = require('del');
 var runSequence = require('run-sequence');
-var postcss = require('gulp-postcss');
-var csscomb = require('gulp-csscomb');
 var csso = require('gulp-csso');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 gulp.paths = {
     dist: 'dist',
@@ -17,6 +17,11 @@ var paths = gulp.paths;
 gulp.task('sass', function () {
     return gulp.src('./src/main.scss')
         .pipe(sass())
+        .pipe(csso({
+            restructure: true,
+            sourceMap: false,
+            debug: false
+        }))
         .pipe(gulp.dest(paths.dist+'/css'));
 });
 
@@ -51,27 +56,37 @@ gulp.task('copy:css', function() {
    .pipe(gulp.dest(paths.dist+'/css'));
 });
 
-gulp.task('postcss', function () {
-    var contextOptions = { modules: true };
-    return gulp.src(paths.dist+'/css/*.css')
-        .pipe(csscomb())
-        .pipe(postcss(contextOptions))
-        .pipe(csso({
-            restructure: true,
-            sourceMap: false,
-            debug: false
-        }))
-        .pipe(gulp.dest(paths.dist+'/css'));
+gulp.task('scripts', function() {
+  return gulp.src([
+        //'./node_modules/jquery/dist/jquery.min.js', 
+        './src/js/common.js'
+    ])
+    .pipe(concat('common.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(paths.dist+'/js'));
 });
 
+const webpack = require('webpack-stream');
 
 gulp.task('copy:js', function() {
-   return gulp.src('./src/js/**/*')
-   .pipe(gulp.dest(paths.dist+'/js'));
+  return gulp.src([
+        './node_modules/bootstrap/js/dist/dropdown.js',
+        './node_modules/bootstrap/js/dist/tooltip.js',
+    ])
+    .pipe(webpack({
+        mode: 'production',
+        externals: {
+          jquery: 'jQuery'
+        },
+        output: {
+          filename: 'bundle.js',
+        },
+    }))
+    .pipe(gulp.dest(paths.dist+'/js'));
 });
 
 gulp.task('build', function(callback) {
-    runSequence('clean:dist', ['sass', 'copy:webfonts', 'copy:js', 'copy:css'], 'postcss', callback);
+    runSequence('clean:dist', ['sass', 'copy:webfonts', 'copy:js', 'scripts', 'copy:css'], callback); 
 });
 
 gulp.task('watch', function(callback) {
