@@ -1,7 +1,9 @@
 /*! Modals, tooltips and notifications */
 
 .mw__overlay {
-    background: rgba(0,0,0,0.3);// url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAALsAAAC7AHtM7T6AAAAE0lEQVR42mNgYGD4DwRgkgHEAQBHygf5nf49TQAAAABJRU5ErkJggg==');
+    background: rgba(0,0,0,0.3);
+    // alt bg 
+    /* background: rgba(0,0,0,0.3)url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAALsAAAC7AHtM7T6AAAAE0lEQVR42mNgYGD4DwRgkgHEAQBHygf5nf49TQAAAABJRU5ErkJggg=='); */
     bottom: 0;
     left: 0;
     overflow-y: auto;
@@ -71,9 +73,7 @@ html.mw-locked {
   }
 }
 
-.tip__content {
-  position: absolute;
-  /* border:1px solid #fff; */
+/* .tip__content {
   border-radius: $border-radius;
   box-shadow:0 0 4px rgba(0,0,0,0.1);
   border: 1px solid rgba(0,0,0,0.1);
@@ -109,7 +109,7 @@ html.mw-locked {
 }
 .tip__cone {
   background:transparent;
-}
+} */
 
 .nw {
   position:fixed;
@@ -122,8 +122,8 @@ html.mw-locked {
 .nw__message {
   cursor:pointer;
   padding:$spacer/2 $spacer;
-  color:#fff;
-  background:rgba(0,0,0,0.3);
+  color:#222;
+  background: $white;
   border-radius:2px;
   margin-bottom:4px;
   position:relative;
@@ -132,28 +132,28 @@ html.mw-locked {
   transition: all 0.15s ease;
   box-shadow:0 0 3px rgba(0,0,0,0.3);
 
-  &.-primary {
+  &.primary {
     background-color: lighten($brand-primary, 20%);
     color:#222;
   }
-  &.-success {
-    background-color: lighten($brand-success, 15%);
+  &.success {
+    background-color: lighten($brand-success, 20%);
     color:#222;
   }
-  &.-warning {
-    background-color: lighten($brand-warning, 10%);
+  &.warning {
+    background-color: lighten($brand-warning, 20%);
     color:#222;
   }
-  &.-danger  {
-    background-color: lighten($brand-danger, 12%);
+  &.danger  {
+    background-color: lighten($brand-danger, 20%);
     color:#222;
   }
-  &.-info  {
-    background-color: lighten($brand-info, 30%);
+  &.info  {
+    background-color: lighten($brand-info, 40%);
     color:#222;
   }
-  &.-moved  {
-    background-color: lighten($brand-moved, 20%);
+  &.moved  {
+    background-color: lighten($brand-moved, 30%);
     color:#222;
   }
 }

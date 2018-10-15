@@ -92,7 +92,14 @@ $column-gap: .35rem !default;
 
 $enable-caret:              true !default;
 $caret-width:                 .4em !default;
+
 $zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;
 
 $border-width:                1px !default;
 $component-active-color:      $white !default;
@@ -125,4 +132,20 @@ $dropdown-item-padding-y:           4px !default;
 $dropdown-item-padding-x:           10px !default;
 
 $dropdown-header-color:             $gray !default;
+
+// Tooltips
+
+$tooltip-font-size:                 $font-size-small !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-border-radius:             $border-radius !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-x:                 .5rem !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
 

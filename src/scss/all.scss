@@ -1,6 +1,6 @@
 /*
  * LCSS - ligthing fast UI-design framework.
- * Copyright 2017 Eugene Dementyev <devg@ya.ru>
+ * Copyright 2018 Eugene Dementyev <devg@ya.ru>
  * Licensed under MIT (https://opensource.org/licenses/MIT)
  */
 
@@ -11,27 +11,31 @@
 // Reset & Typo
 @import "sanitize";
 
-@import "typography";
+// Flex grid system
+@import "grid";
+
 @import "layout";
+@import "typography";
+
 
 // Components
-@import "columns";
 @import "badges";
-@import "icons";
 @import "btn";
-@import "btns";
+@import "btn-group";
 @import "inputs";
 @import "checkbox";
 @import "form";
 @import "tabs";
 @import "alerts";
-@import "caret";
-@import "dropdowns";
-@import "cards";
 @import "modals";
+@import "caret";
+@import "dropdown";
+@import "tooltip";
+@import "cards";
 
+@import "utils";
+@import "icons";
 
-@import "utilities";
 
 // Custom styles
 //@import "custom";

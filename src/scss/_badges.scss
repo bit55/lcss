@@ -17,73 +17,73 @@
   text-transform: uppercase;
   //vertical-align: middle;
 }
-.badge.-subtle {
+.badge.subtle {
   background-color: #fff;
   border-color: #ccc;
   color: $gray-dark;
 }
-.badge.-pill {
+.badge.pill {
   padding: 3px 6px 2px;
   border-radius: 2em;
   border:none;
 }
-.badge.-primary {
+.badge.primary {
   background-color: $brand-primary;
   border-color: $brand-primary;
   color: #fff;
 }
-.badge.-primary.-subtle {
+.badge.primary.subtle {
   background-color: #fff;
   border-color: $brand-primary;
   color: $brand-primary;
 }
-.badge.-success {
+.badge.success {
   background-color: $brand-success;
   border-color: $brand-success;
   color: #fff;
 }
-.badge.-success.-subtle {
+.badge.success.subtle {
   background-color: #fff;
   border-color: $brand-success;
   color: $brand-success;
 }
-.badge.-danger {
+.badge.danger {
   background-color: $brand-danger;
   border-color: $brand-danger;
   color: #fff;
 }
-.badge.-danger.-subtle {
+.badge.danger.subtle {
   background-color: #fff;
   border-color: $brand-danger;
   color: $brand-danger;
 }
-.badge.-warning {
+.badge.warning {
   background-color: $brand-warning;
   border-color: $brand-warning;
   color: $gray-dark;
 }
 
-.badge.-warning.-subtle {
+.badge.warning.subtle {
   background-color: #fff;
   border-color: $brand-warning;
   color: darken($brand-warning, 20%);
 }
-.badge.-info {
+.badge.info {
   background-color: $brand-info;
   border-color: $brand-info;
   color: #fff;
 }
-.badge.-info.-subtle {
+.badge.info.subtle {
   background-color: #fff;
   border-color: $brand-info;
   color: $brand-info;
 }
-.badge.-moved {
+.badge.moved {
   background-color: $brand-moved;
   border-color: $brand-moved;
   color: #fff;
 }
-.badge.-moved.-subtle {
+.badge.moved.subtle {
   background-color: #fff;
   border-color: $brand-moved;
   color: $brand-moved;

@@ -14,9 +14,6 @@
 
   <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../dist/js/jquery.min.js"><\/script>')</script>
-  
-  <!--script src="../dist/js/popper.min.js"></script>
-  <script src="../dist/js/bootstrap.min.js"></script-->
   <script src="../dist/js/bundle.js"></script>
   <script src="../dist/js/common.js"></script>
   <script src="example.js"></script>
@@ -35,7 +32,7 @@
         
     </div>
 
-    <ul id="responsive-nav" class="nav col-md-6 show-md">
+    <ul id="responsive-nav" class="nav col-md-10 show-md">
         <li class="nav__item"><a class="nav__link" href="#badges">Badges</a></li>
         <li class="nav__item"><a class="nav__link" href="#buttons">Buttons</a></li>
         <li class="nav__item"><a class="nav__link" href="#forms">Forms</a></li>
@@ -52,20 +49,11 @@
                 <a class="dropdown-item" href="../4/paper/_bootswatch.scss">_bootswatch.scss</a>
               </div>
             </li>
-        <li class="nav__item"><a href="#" class="btn btn-primary">Button</a><a href="#" class="btn btn-primary"><span class="fa-cog ico ico-left"></span>With icon</a></li>
-        <li class="nav__item"><a href="#" class="btn btn-light"><span class="fa-cog ico ico-left"></span>With icon</a></li>
+        <li class="nav__item"><a href="#" class="btn primary">Button</a><a href="#" class="btn primary"><span class="fa-cog ico left"></span>With icon</a></li>
+        <li class="nav__item"><a href="#" class="btn light"><span class="fa-cog ico left"></span>With icon</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span id="top-badge" class="badge pill danger">danger</span></a></li>
+        <li class="nav__item right"><a class="nav__link" href="#"><i class="ico left fa-user-circle-o"></i> devg@ya.ru</a></li>
     </ul>
-
-    <!--div class="nav col-md-2">
-        <div class="qs">
-            <input class="qs__input" type="text" placeholder="поиск..."/>
-        </div>
-    </div>
-
-    <ul class="nav col-md-2">
-        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span id="top-badge" class="badge -pill -danger">danger</span></a></li>
-        <li class="nav__item"><a class="nav__link" href="#"><i class="ico ico-left fa-user-circle-o"></i> devg@ya.ru</a></li>
-    </ul-->
   </div>
 </div>
 
@@ -74,9 +62,9 @@
     <p>Another text</p>
     <div class="breadcrumb"><a href="#">Bread</a> / <a href="#">crumb</a></div>
     <div class="page-header-right">
-      <button class="btn btn-subtle" onclick="$('#top-badge').toggleClass('hidden')">Top badge</button>
-      <button class="btn btn-subtle" href="/example/async.php" onclick="cms.ajaction(this);">Ajaction</button>
-      <button class="btn btn-subtle" onclick="cms.modal.alert('Hello message');cms.modal.alert('Hello message 2')">Show simple modal</button>
+      <button class="btn subtle" onclick="$('#top-badge').toggleClass('hidden')">Top badge</button>
+      <button class="btn subtle" href="/example/async.php" onclick="cms.ajaction(this);">Ajaction</button>
+      <button class="btn subtle" onclick="cms.modal.alert('Hello message wide');cms.modal.alert('Hello ')">Show simple modal</button>
     </div>
     <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
 
@@ -88,12 +76,12 @@
   <div class="col">
     <h1>This is 1st level heading</h1>
     <button class="btn" onclick="cms.notice.show('Hello message')">Notice default</button>
-    <button class="btn btn-primary" onclick="cms.notice.show('Hello message','primary')">primary</button>
-    <button class="btn btn-success" onclick="cms.notice.show('Hello message','success')">success</button>
-    <button class="btn btn-warning" onclick="cms.notice.show('Hello message','warning')">warning</button>
-    <button class="btn btn-danger" onclick="cms.notice.show('Hello message','danger')">danger</button>
-    <button class="btn btn-info" onclick="cms.notice.show('Hello message','info')">info</button>
-    <button class="btn btn-moved" onclick="cms.notice.show('Hello message','moved')">moved</button>
+    <button class="btn primary" onclick="cms.notice.show('Hello message','primary')">primary</button>
+    <button class="btn success" onclick="cms.notice.show('Hello message','success')">success</button>
+    <button class="btn warning" onclick="cms.notice.show('Hello message','warning')">warning</button>
+    <button class="btn danger" onclick="cms.notice.show('Hello message','danger')">danger</button>
+    <button class="btn info" onclick="cms.notice.show('Hello message','info')">info</button>
+    <button class="btn moved" onclick="cms.notice.show('Hello message','moved')">moved</button>
     <p>This is a test paragraph.</p>
     
     <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
@@ -188,47 +176,45 @@
 
 <p>
     <span class="badge">default</span>
-    <span class="badge -success">success</span>
-    <span class="badge -danger">danger</span>
-    <span class="badge -warning">warning</span>
-    <span class="badge -primary">primary</span>
-    <span class="badge -info">info</span>
-    <span class="badge -moved">moved</span>
+    <span class="badge success">success</span>
+    <span class="badge danger">danger</span>
+    <span class="badge warning">warning</span>
+    <span class="badge primary">primary</span>
+    <span class="badge info">info</span>
+    <span class="badge moved">moved</span>
 </p>
 <p>
-    <span class="badge -subtle">default</span>
-    <span class="badge -subtle -success">success</span>
-    <span class="badge -subtle -danger">danger</span>
-    <span class="badge -subtle -warning">warning</span>
-    <span class="badge -subtle -primary">primary</span>
-    <span class="badge -subtle -info">info</span>
-    <span class="badge -subtle -moved">moved</span>
+    <span class="badge subtle">default</span>
+    <span class="badge subtle success">success</span>
+    <span class="badge subtle danger">danger</span>
+    <span class="badge subtle warning">warning</span>
+    <span class="badge subtle primary">primary</span>
+    <span class="badge subtle info">info</span>
+    <span class="badge subtle moved">moved</span>
 </p>
 
-<h2>Badges (-pill) <sup class="badge -moved">New!</sup></h2>
+<h2>Badges (pill) <sup class="badge moved">New!</sup></h2>
 <hr>
-<cite>Use the <code>.-pill</code> modifier class to make badges more rounded (with a larger border-radius).</cite>
+<cite>Use the <code>.pill</code> modifier class to make badges more rounded (with a larger border-radius).</cite>
 <hr>
-  <p>Inbox <span class="badge">1</span></p>
-
   <p>Colored badge
-  <span class="badge -pill">default &times;</span>
-    <span class="badge -pill -success">success</span>
-    <span class="badge -pill -danger">danger</span>
-    <span class="badge -pill -warning">warning</span>
-    <span class="badge -pill -primary">primary</span>
-    <span class="badge -pill -info">info</span>
-    <span class="badge -pill -moved">moved</span>
+  <span class="badge pill">default &times;</span>
+    <span class="badge pill success">success</span>
+    <span class="badge pill danger">danger</span>
+    <span class="badge pill warning">warning</span>
+    <span class="badge pill primary">primary</span>
+    <span class="badge pill info">info</span>
+    <span class="badge pill moved">moved</span>
   <br></p>
   <br>
-  <button class="btn">In button <span class="badge -pill">1</span></button>
-  <button class="btn btn-primary">In button <span class="badge -pill">2</span></button>
-  <a href="#" class="btn btn-primary">In link <span class="badge">2</span></a>
-  <button class="btn">In button <span class="badge -warning">2</span></button>
-  <a href="#" class="btn">In link <span class="badge -pill -warning">2</span></a>
+  <button class="btn">In button <span class="badge pill">1</span></button>
+  <button class="btn primary">In button <span class="badge pill">2</span></button>
+  <a href="#" class="btn primary">In link <span class="badge">2</span></a>
+  <button class="btn">In button <span class="badge warning">2</span></button>
+  <a href="#" class="btn">In link <span class="badge pill -warning">2</span></a>
   <br>
 
-<h2><span class="ico ico-left fa-home"></span>Icons</h2>
+<h2><span class="ico left fa-home"></span>Icons</h2>
 
 <p>
     <span class="fa fa-bars"></span>
@@ -237,7 +223,7 @@
 </p>
 <p>
     <button class="btn"><i class="ico fa-edit"></i> Iconed button</button>
-    <button class="btn btn-primary"><i class="ico fa-edit"></i> Iconed button</button>
+    <button class="btn primary"><i class="ico fa-edit"></i> Iconed button</button>
 
 </p>
 
@@ -245,37 +231,37 @@
 <div>
   <button class="btn">Button</button>
   <a href="#" class="btn">Button as link</a>
-  <a href="#" class="btn btn-primary">Button as link 2</a>
-  <button class="btn btn-primary">Primary button</button>
-  <button class="btn btn-light">Light button </button>
+  <a href="#" class="btn primary">Button as link 2</a>
+  <button class="btn primary">Primary button</button>
+  <button class="btn light">Light button </button>
 
   <br><br>
 
-  <button class="btn"><span class="ico ico-left fa-cog -loading" aria-hidden="true"></span> Iconed button</button>
-  <button class="btn"><span class="ico ico-left fa-spinner -loading" aria-hidden="true"></span> Iconed button</button>
-  <button class="btn"><span class="ico ico-left fa-chart-bar"></span> Iconed button</button>
+  <button class="btn"><span class="ico left fa-cog loading" aria-hidden="true"></span> Iconed button</button>
+  <button class="btn"><span class="ico left fa-spinner loading" aria-hidden="true"></span> Iconed button</button>
+  <button class="btn"><span class="ico left fa-chart-bar"></span> Iconed button</button>
 
   <br><br>
 
-  <button class="btn"><i class="ico ico-left fa-check"></i> Iconed button</button>
-  <button class="btn"><i class="ico ico-left fa-pencil-alt"></i> Iconed button</button>
-  <button class="btn"><i class="ico ico-left fa-edit"></i> Iconed button</button>
+  <button class="btn"><i class="ico left fa-check"></i> Iconed button</button>
+  <button class="btn"><i class="ico left fa-pencil-alt"></i> Iconed button</button>
+  <button class="btn"><i class="ico left fa-edit"></i> Iconed button</button>
 
   <br><br>
 
   <button class="btn" disabled>Disabled button</button>
-  <button class="btn btn-subtle">Cancel</button>
+  <button class="btn subtle">Cancel</button>
 
   <button class="btn"><span class="fa-sliders-h ico"></span></button>
-  <button class="btn btn-subtle"><span class="fa-cogs ico"></span>  Subtle button</button>
+  <button class="btn subtle"><span class="fa-cogs ico"></span>  Subtle button</button>
   <button class="btn" disabled>Disabled button</button>
-  <button class="btn btn-primary" disabled>Primary disabled</button>
+  <button class="btn primary" disabled>Primary disabled</button>
 
   <br><br>
-  <button class="btn btn-compact">Compact</button>
-  <button class="btn btn-compact"><span class="ico ico-left fa-bars"></span> Compact</button>
-  <button class="btn btn-compact btn-primary">Compact primary</button>
-  <a href="#3" class="btn btn-compact">Compact link</a>
+  <button class="btn compact">Compact</button>
+  <button class="btn compact"><span class="ico left fa-bars"></span> Compact</button>
+  <button class="btn compact primary">Compact primary</button>
+  <a href="#3" class="btn compact">Compact link</a>
 </div>
 
 
@@ -283,38 +269,27 @@
 <h3>Buttons group</h3>
 
 <div>
-  <div class="btns">
-    <button class="btn">Button <span class="fa-ellipsis-h ico ico-right"></span></button>
+  <div class="btn-group">
+    <button class="btn">Button <span class="fa-ellipsis-h ico right"></span></button>
     <a href="#" class="btn">Button as link</a>
   </div>
-  <div class="btns">
+  <div class="btn-group">
     <button class="btn">Button</button>
     <button class="btn">Button</button>
     <button class="btn" disabled>Disabled button</button>
   </div>
 
-  <div class="dropdown -right">
-    <a href="#" class="btn dropdown-toggle" onclick="return false">
-      Dropdown menu <i class="ico fa-caret-down ico-right"></i>
-    </a>
-    <div class="menu">
-      <a class="menu__item" href="#">Menu item 1</a>
-      <a class="menu__item" href="#">Menu item 2</a>
-      <a class="menu__item" href="#">Another</a>
+  <button class="btn" data-toggle="tooltip" data-placement="bottom" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">Modal</button>
+  <div class="dropdown">
+    <button id="btnGroupDrop2" type="button" class="btn success dropdown-toggle" data-toggle="dropdown">Success</button>
+    <div class="dropdown-menu">
+      <div class="dropdown-item-text">gregrwy rrewr yt ryweryetryt</div>
+      <a class="dropdown-item active" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
+      <a class="dropdown-item" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
     </div>
   </div>
-  <button class="btn tip" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">Modal</button>
-  <button class="btn" data-toggle="tooltip" data-placement="bottom" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">Modal</button>
-  
-  <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success</button>
-                    <div class="dropdown-menu">
-                      <div class="dropdown-item-text">gregrwy rrewr yt ryweryetryt</div>
-                      <a class="dropdown-item active" href="#"><i class="ico ico-left fa-check"></i>Dropdown link</a>
-                      <a class="dropdown-item" href="#"><i class="ico ico-left fa-check"></i>Dropdown link</a>
-                    </div>
 </div>
 
-                    
 
 
 <h2 id="forms">Forms</h2>
@@ -333,7 +308,7 @@
       <label class="col w-240 form-label -required">Short field<span class="required"></span></label>
       <div class="col">
         <input class="input short-field" name="d-fname" title="first name" type="text">
-        <div class="text -danger">danger message here</div>
+        <div class="text-danger">danger message here</div>
         <div class="form-text">Default width input of a required field</div>
       </div>
   </div>
@@ -415,8 +390,8 @@
     <textarea class="textarea" rows="6" row="10" name="licenseKey" id="licenseKey"></textarea>
   </div>
 </div>
-<div class="btns-container">
-  <div class="btns">
+<div class="btn-group-container">
+  <div class="btn-group">
       <input class="btn submit" value="Save" id="d-save-btn1" type="submit">
       <a class="btn cancel" href="#">Cancel</a>
   </div>
@@ -462,7 +437,7 @@
 <p>
 
   <span title="прикрепить файлы" class="btn btn-upload">
-    <i class="ico fa-paperclip ico-left"></i><span>Выбрать...</span>
+    <i class="ico fa-paperclip left"></i><span>Выбрать...</span>
     <input type="file" multiple="multiple" name="file" id="file" accept="image/gif, image/png">
   </span>
 </p>
@@ -473,241 +448,167 @@
 <h2 id="tabs">Tabs</h2>
 
 <div class="row">
-  <div class="col-sm-3">
-    <h5>default</h5><hr>
-  </div>
-  <div class="col-sm-3">
-    <h5>-classic</h5><hr>
-  </div>
-  <div class="col-sm-3">
-    <h5>-rect</h5><hr>
-  </div>
-  <div class="col-sm-3">
-    <h5>-rounded</h5><hr>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-3">
+  <div class="col">
+    <h5 class="mb-2">default</h5>
     <ul class="tabs">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <ul class="tabs -classic">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <ul class="tabs -rect">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <ul class="tabs -rounded">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
     </ul>
   </div>
 </div>
-
-
 
 <div class="row">
-  <div class="col-sm-3">
-    <h5 class="mb-2">-bg</h5>
-    <ul class="tabs -bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+  <div class="col">
+    <h5 class="mb-2">underlined</h5>
+    <ul class="tabs underlined">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-classic -topline</h5>
-    <ul class="tabs -classic -topline">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rect -bg</h5>
-    <ul class="tabs -rect -bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rounded -bg</h5>
-    <ul class="tabs -rounded -bg">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
     </ul>
   </div>
 </div>
-
-
 
 <div class="row">
-  <div class="col-sm-3">
-    <h5 class="mb-2"> -underlined -bg -bordered</h5>
-    <ul class="tabs -underlined -bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+  <div class="col">
+    <h5 class="mb-2">underlined narrow</h5>
+    <ul class="tabs underlined narrow">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-classic -topline -gray</h5>
-    <ul class="tabs -classic -topline -gray">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link -grey" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rect -bg -bordered</h5>
-    <ul class="tabs -rect -bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rounded -bg -bordered</h5>
-    <ul class="tabs -rounded -bg -bordered">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
     </ul>
   </div>
 </div>
-
-
 
 <div class="row">
-  <div class="col-sm-3">
-    <h5 class="mb-2">-underlined</h5>
-    <ul class="tabs -underlined">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+  <div class="col">
+    <h5 class="mb-2">classic</h5>
+    <ul class="tabs classic">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-classic -gray</h5>
-    <ul class="tabs -classic -gray">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rect -underlined</h5>
-    <ul class="tabs -rect -underlined">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
-    </ul>
-  </div>
-
-  <div class="col-sm-3">
-    <h5 class="mb-2">-rounded -underlined</h5>
-    <ul class="tabs -rounded -underlined">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
     </ul>
   </div>
 </div>
-
-
-
 
 <div class="row">
-  <div class="col-sm-3">
-    <h5 class="mb-2">-underlined -narrow</h5>
-    <ul class="tabs -underlined -narrow">
-      <li class="tabs__item"><a class="tabs__link -active" href="#">All</a></li>
+  <div class="col">
+    <h5 class="mb-2">classic gray</h5>
+    <ul class="tabs classic gray">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
       <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
-      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus ico-left"></i>Create</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
     </ul>
   </div>
-
-  
 </div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">classic topline</h5>
+    <ul class="tabs classic topline">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">classic topline gray</h5>
+    <ul class="tabs classic topline gray">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">rect</h5>
+    <ul class="tabs rect">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">rect round</h5>
+    <ul class="tabs rect round">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">rect bg</h5>
+    <ul class="tabs rect bg">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5 class="mb-2">rect bg bordered</h5>
+    <ul class="tabs rect bg bordered">
+      <li class="tabs__item"><a class="tabs__link active" href="#">All</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Selected</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Inbox <span class="badge">2</span></a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#">Other</a></li>
+      <li class="tabs__item"><a class="tabs__link" href="#"><i class="ico fa-plus left"></i>Create</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 <hr>
 <h3>Alerts</h3>
 
-<div class="row hide-md">
+<div class="row">
   <div class="col-sm-4"><div class="alert">Well, probably. </div></div>
-  <div class="col-sm-4"><div class="alert -success">Well, probably this list item should be longer. </div></div>
-  <div class="col-sm-4"><div class="alert -warning">Well, probably this list item should be longer. </div></div>
-  <div class="col-sm-4"><div class="alert -danger">Well, probably this list item should be longer. </div></div>
-  <div class="col-sm-4"><div class="alert -info">Well, probably this list item should be longer. </div></div>
-  <div class="col-sm-4"><div class="alert -moved">Well, probably this list item should be longer. </div></div>
-  <div class="col-sm-4"><div class="alert -primary">Well. </div></div>
+  <div class="col-sm-4"><div class="alert success">Well, probably this list item should be longer. </div></div>
+  <div class="col-sm-4"><div class="alert warning">Well, probably this list item should be longer. </div></div>
+  <div class="col-sm-4"><div class="alert danger">Well, probably this list item should be longer. </div></div>
+  <div class="col-sm-4"><div class="alert info">Well, probably this list item should be longer. </div></div>
+  <div class="col-sm-4"><div class="alert moved">Well, probably this list item should be longer. </div></div>
+  <div class="col-sm-4"><div class="alert primary">Well. </div></div>
 </div>
 
 
 <h3>Columns</h3>
 
-<div class="hide-md">
+<div class="">
 
 <div class="row">
   <div class="col col-6"><div class="alert">.col</div></div>
@@ -717,10 +618,10 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6 col-sm-12"><div class="alert -success">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
-  <div class="col-md-2 col-sm-6"><div class="alert -info">.col</div></div>
-  <div class="col-md-2 col-sm-6"><div class="alert -info">.col</div></div>
-  <div class="col-md-2 col-sm-12"><div class="alert -danger">.col</div></div>
+  <div class="col-md-6 col-sm-12"><div class="alert success">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
+  <div class="col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col-md-2 col-sm-12"><div class="alert danger">.col</div></div>
 </div>
 
 <div class="row">
@@ -730,10 +631,10 @@
 </div>
 
 <div class="row">
-  <div class="col col-narrow" style="width:400px"><div class="alert -success">400px</div></div>
-  <div class="col col-md-2 col-sm-6"><div class="alert -info">.col</div></div>
-  <div class="col col-md-2 col-sm-6"><div class="alert -info">.col</div></div>
-  <div class="col"><div class="alert -danger"><input type="text" class="input"></div></div>
+  <div class="col col-narrow" style="width:400px"><div class="alert success">400px</div></div>
+  <div class="col col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col"><div class="alert danger"><input type="text" class="input"></div></div>
 </div>
 
 </div>

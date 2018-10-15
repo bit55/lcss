@@ -1,44 +1,16 @@
 /*! Custom */
 // Place here your custom styles
 
-// Other helpers
-.text-muted {
-  color:#999 !important;
-}
-.text-right {
-  text-align: right !important;
-}
-.text-center {
-  text-align: center !important;
-}
-
-.text-primary {
-    color: #2C3E50 !important;
-}
-a.text-primary:focus, a.text-primary:hover {
-    color: #1a252f !important;
-}
-.text-danger {
-    color: #E74C3C !important;
-}
-a.text-danger:focus, a.text-danger:hover {
-    color: #d62c1a !important;
-}
-
-
-.float-right {
-  float:right;
-}
-
-.table-bordered {
-    border: 1px solid #b4bcc2;
-}
 .table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
     border-collapse: collapse;
     background-color: transparent;
+}
+
+.table.bordered {
+    border: 1px solid #b4bcc2;
 }
 .table-inverse {
     color: #fff;

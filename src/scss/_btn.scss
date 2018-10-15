@@ -14,11 +14,17 @@
   //height: 2.14285714em; /* 30px - using ems so the fields increase in line with user specified font-sizes */  
   line-height: $line-height-base; /* 20px */
   
-  margin: 0;
+  margin: 1px 0; // 1px for line breaks
   padding: 4px 10px;
   text-decoration: none;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+.btn.subtle {
+  background: transparent;
+  border-color: transparent;
+  color: #555;
 }
 
 /* Ensure underlines not added by link styles */
@@ -41,28 +47,16 @@ a.btn:focus {
 }
 
 .btn:active,
-.btn-active {
+.btn.active {
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   background-image: none;
   background: #e7e7e7;
   text-decoration: none;
 }
 
-/*.btn-light,
- .btn:visited.-light  
-{
-  background: #fff;
-}*/
 
-.btn-subtle {
-  background: transparent;
-  border-color: transparent;
-  color: #555;
-}
 
-.btn-compact
-/* .btn:visited.-compact */ 
-{
+.btn.compact {
   font-size: 0.8em;
   //height: 2.16667em;
   padding: 2px 8px;
@@ -81,37 +75,37 @@ a.btn:focus {
   cursor: default;
 }
 /* Subtle buttons have their own disabled state*/
-.btn-subtle[disabled],
-.btn-subtle[aria-disabled="true"] {
+.btn.subtle[disabled],
+.btn.subtle[aria-disabled="true"] {
   border: 0;
   background: none;
 }
 
 /* Primary Buttons */
-.btn-primary,
-.btn-primary,
-.btn-primary:visited {
+.btn.primary,
+.btn.primary,
+.btn.primary:visited {
   background: $brand-primary;
   border-color: transparent;
   color: #fff;
 }
-.btn-primary:hover,
-.btn-primary:focus {
+.btn.primary:hover,
+.btn.primary:focus {
   background: darken($brand-primary, 10%);
   border-color: transparent;
   color: #fff;
 }
-.btn-primary:active {
+.btn.primary:active {
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   background-image: none;
   background: darken($brand-primary, 10%);
   text-decoration: none;
 }
 
-.btn-primary[disabled],
-.btn-primary[disabled]:hover,
-.btn-primary[disabled]:focus,
-.btn-primary[disabled]:active {
+.btn.primary[disabled],
+.btn.primary[disabled]:hover,
+.btn.primary[disabled]:focus,
+.btn.primary[disabled]:active {
   background: lighten($brand-primary, 20);
   border-color: transparent;
   box-shadow: none;
@@ -119,30 +113,30 @@ a.btn:focus {
 }
 
 /* Success Buttons */
-.btn-success,
-.btn-success,
-.btn-success:visited {
+.btn.success,
+.btn.success,
+.btn.success:visited {
   background: $brand-success;
   border-color: transparent;
   color: #fff;
 }
-.btn-success:hover,
-.btn-success:focus {
+.btn.success:hover,
+.btn.success:focus {
   background: darken($brand-success, 10%);
   border-color: transparent;
   color: #fff;
 }
-.btn-success:active {
+.btn.success:active {
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   background-image: none;
   background: darken($brand-success, 10%);
   text-decoration: none;
 }
 
-.btn-success[disabled],
-.btn-success[disabled]:hover,
-.btn-success[disabled]:focus,
-.btn-success[disabled]:active {
+.btn.success[disabled],
+.btn.success[disabled]:hover,
+.btn.success[disabled]:focus,
+.btn.success[disabled]:active {
   background: lighten($brand-success, 20);
   border-color: transparent;
   box-shadow: none;
@@ -150,30 +144,30 @@ a.btn:focus {
 }
 
 /* Warning Buttons */
-.btn-warning,
-.btn-warning,
-.btn-warning:visited {
+.btn.warning,
+.btn.warning,
+.btn.warning:visited {
   background: $brand-warning;
   border-color: transparent;
   color: #fff;
 }
-.btn-warning:hover,
-.btn-warning:focus {
+.btn.warning:hover,
+.btn.warning:focus {
   background: darken($brand-warning, 10%);
   border-color: transparent;
   color: #fff;
 }
-.btn-warning:active {
+.btn.warning:active {
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   background-image: none;
   background: darken($brand-warning, 10%);
   text-decoration: none;
 }
 
-.btn-warning[disabled],
-.btn-warning[disabled]:hover,
-.btn-warning[disabled]:focus,
-.btn-warning[disabled]:active {
+.btn.warning[disabled],
+.btn.warning[disabled]:hover,
+.btn.warning[disabled]:focus,
+.btn.warning[disabled]:active {
   background: lighten($brand-warning, 20);
   border-color: transparent;
   box-shadow: none;
@@ -198,7 +192,7 @@ a.btn:focus {
   opacity: 0;
 }
 
-.btn-upload.-changed {
+.btn-upload.selected {
   background-color: $brand-warning;
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 0, 0, 0.3);

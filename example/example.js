@@ -20,10 +20,10 @@ $(function() {
     }
 
     if (fileInput.files.length) {
-      $(fileInput).parent('.btn-upload').addClass('-changed');
+      $(fileInput).parent('.btn-upload').addClass('selected');
       $(fileInput).parent('.btn-upload').find('span').html('(' + fileNames.length + ' шт.) ' + fileNames.join("; ").trim());
     } else {
-      $(fileInput).parent('.btn-upload').removeClass('-changed');
+      $(fileInput).parent('.btn-upload').removeClass('selected');
       $(fileInput).parent('.btn-upload').find('span').html(defaultLabel);
     }
   }, false);
@@ -33,8 +33,8 @@ $(function() {
 $(function() {
   $('.tabs__link').click(function(e) {
     e.preventDefault();
-    $(this).parent().parent().find('.tabs__link').removeClass('-active');
-    $(this).addClass('-active');
+    $(this).parent().parent().find('.tabs__link').removeClass('active');
+    $(this).addClass('active');
   });
 
 
@@ -47,6 +47,7 @@ $(function() {
     }
   });
 
-  $('.tip').tooltips();
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip({
+    delay: { "show": 0, "hide": 200 }
+  });
 });

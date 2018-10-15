@@ -1,4 +1,4 @@
-/*! Columns */
+/*! Grid */
 
 // Breakpoints order from small to large (mobile first).
 
@@ -16,7 +16,7 @@
   flex-wrap: wrap;
   margin-left: -$column-gap;
   margin-right: -$column-gap;
-  margin-bottom: $column-gap*2;
+  //margin-bottom: $column-gap*2;
 
   &.-gapless {
     margin-left: 0;
@@ -36,14 +36,14 @@
     align-items: stretch;
   }
 }
-.row:last-child {
-  margin-bottom: 0;
-}
+// .row:last-child {
+  // margin-bottom: 0;
+// }
 
-[class*="col-"] {
+[class*="col-"], .col {
   width: 100%;
   padding: $column-gap;
-  padding-right: $column-gap;
+  //padding-right: $column-gap;
   flex: none;
 }
 

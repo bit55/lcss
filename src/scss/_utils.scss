@@ -41,6 +41,34 @@
   }
 }
 
+.float-right {
+  float:right;
+}
+
+/*! Text styling */
+.text-muted {
+  color:#999 !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.text-primary {
+    color: #2C3E50 !important;
+}
+a.text-primary:focus, a.text-primary:hover {
+    color: #1a252f !important;
+}
+.text-danger {
+    color: #E74C3C !important;
+}
+a.text-danger:focus, a.text-danger:hover {
+    color: #d62c1a !important;
+}
+
 /*! Sizing */
 .w-240 {
   width: 240px;

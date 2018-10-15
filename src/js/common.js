@@ -20,7 +20,7 @@ $(document).ready(function(){
     }
     // отправка основной формы по Ctrl+Enter
     else if((e.ctrlKey) && ((e.keyCode == 13)||(e.keyCode == 10))) {
-      $('#mainform').submit();
+      $('.form-default').submit();
     }
   });
 
@@ -210,14 +210,14 @@ var cms = {};
   cms.modal.alert = function(message, fn) {
     var modal =  new Modal('', fn, fn); // same callback
     modal.content.append('<div style="margin-bottom:1rem">'+message+'</div>');
-    modal.content.append('<div class="text-center"><button type="button" class="btn btn-primary mw__confirm">ОК</button></div>');modal.content.find(".mw__confirm").focus();
+    modal.content.append('<div class="text-center"><button type="button" class="btn primary mw__confirm">ОК</button></div>');modal.content.find(".mw__confirm").focus();
     modal.open();
   };
   // confirm message
   cms.modal.confirm = function(message, fnConfirm, fnCancel) {
     var modal =  new Modal('', fnConfirm, fnCancel);
     modal.content.append('<div style="margin-bottom:1rem">'+message+'</div>');
-    modal.content.append('<div class="text-center"><button type="button" class="btn btn-primary mw__confirm">ОК</button> <button type="button" class="btn mw__cancel">Отмена</button></div>');
+    modal.content.append('<div class="text-center"><button type="button" class="btn primary mw__confirm">ОК</button> <button type="button" class="btn mw__cancel">Отмена</button></div>');
     modal.content.find(".mw__confirm").focus();
     modal.open();
   };
@@ -336,7 +336,7 @@ cms.notice.init = function() {
 cms.notice.show = function (message, type, wait) {
   cms.notice.init();
   var msg = document.createElement("div");
-  msg.className = "nw__message" + ((typeof type === "string" && type !== "") ? " -" + type : "");
+  msg.className = "nw__message" + ((typeof type === "string" && type !== "") ? " "+type : "");
   msg.innerHTML = message;
   // append child
   $('.nw').prepend(msg);
@@ -379,127 +379,6 @@ cms.notice.hideAll = function () {
     if (!nw.hasChildNodes()) nw.className += " nw-hidden";
   }
 };
-
-/**
- * Tooltips
- */
-(function($){
-  $.fn.tooltips = function(params){
-    var params = $.extend({
-      timehide: 150,
-      posY: 'bottom',
-      maxWidth: '240px',
-      content: false,
-      tipEvent: 'mouseenter'
-    }, params);
-
-    return this.each(function(){
-      var tipTag = $(this).css({whiteSpace:'nowrap'}),
-        wW = $(window).width(),
-        wH = $(window).height(),
-        timehide = params.timehide,
-        maxWidth = params.maxWidth,
-        posY = params.posY,
-        tipFuncId = false,
-        tipF = false,
-        tipEvent = params.tipEvent,
-        ttContent = $('<div>').css({maxWidth:maxWidth}).addClass('tip__content -hidden').appendTo('body'),
-        content = params.content,
-        ttClass = '-'+posY,
-        tipContent = '',
-        tipTagLeft = tipTag.offset().left,
-        tipTagTop = tipTag.offset().top,
-        tipTagWidth = tipTag.outerWidth(),
-        tipTagHeight = tipTag.outerHeight(),
-        tipTagCenter = tipTagLeft + tipTagWidth/2,
-        ttInner = $('<div>').addClass('tip__inner').html(tipContentFunc()).appendTo(ttContent),
-        ttCone = $('<div>').addClass('tip__cone').appendTo(ttContent),
-        ttContentWidth = ttContent.outerWidth(),
-        ttContentHeight = ttContent.outerHeight(),
-        ttContentCenter = ttContentWidth/2,
-        coneLeft = 0;
-
-      function tipContentFunc(){
-        if(content == false){
-          tipContent = tipTag.attr('title');
-          tipTag.attr('title','');
-        }else{
-          tipTag.attr('title','');
-          tipContent = content;
-        };
-        return tipContent;
-      };
-
-      tipTag.on(tipEvent, function(e){
-        var eX = e.pageX;
-        var eY = e.pageY;
-        tipLeft = tipTagCenter - ttContentCenter;
-        coneLeft = 0;
-        if(tipLeft < 0){
-          tipLeft = 5;
-          coneLeft = (tipTagCenter - ttContentCenter) - 5;
-        };
-        if(tipLeft > (wW - ttContentWidth)){
-          tipLeft = (wW - (ttContentWidth + 5));
-          coneLeft = (tipTagCenter - ttContentCenter) - (wW - (ttContentWidth + 5));
-        };
-        ttCone.css({marginLeft:coneLeft - 6 + 'px'});
-        if(posY == 'top'){
-          tipTop = tipTagTop - (ttContentHeight+5);
-          if(tipTop < $(window).scrollTop()){
-            tipTop = (tipTagTop + tipTagHeight +5);
-            ttClass = '-bottom';
-          } else {
-            ttClass = '-top';
-          }
-        };
-        if(posY == 'bottom'){
-          tipTop = (tipTagTop + tipTagHeight +5);
-          if((tipTop + ttContentHeight) > $(window).scrollTop() + wH){
-            tipTop = tipTagTop - (ttContentHeight+5);
-            ttClass = '-top';
-          } else {
-            ttClass = '-bottom';
-          }
-        };
-        ttContent.removeClass('-top').removeClass('-bottom').addClass(ttClass).css({left:tipLeft, top:tipTop});
-        ttContent.removeClass('-hidden');
-        clearTimeout(tipFuncId);
-        if(tipEvent == 'click'){
-          return false;
-        };
-      }).on('mouseleave',function(){
-
-        tipF = function tipFunc(){ //todo: delay for hide animations complete
-          ttContent.addClass('-hidden');
-          //ttContent.css({display:'none'});
-        };
-        clearTimeout(tipFuncId);
-        tipFuncId = setTimeout(tipF,timehide);
-      });
-      ttContent.on('mouseenter',function(){
-        clearTimeout(tipFuncId);
-      }).on('mouseleave',function(){
-        clearTimeout(tipFuncId);
-        tipFuncId = setTimeout(tipF,timehide);
-      });
-      $(window).resize(function(){
-        wW = $(window).width();
-        wH = $(window).height();
-        tipTagLeft = tipTag.offset().left;
-        tipTagTop = tipTag.offset().top;
-        tipTagWidth = tipTag.outerWidth();
-        tipTagHeight = tipTag.outerHeight();
-        tipTagCenter = tipTagLeft + tipTagWidth/2;
-        ttContentWidth = ttContent.outerWidth();
-        ttContentHeight = ttContent.outerHeight();
-        ttContentCenter = ttContentWidth/2;
-        ttClass = '-'+posY;
-      })
-    });
-  };
-})(jQuery);
-
 
 /*
 * A slim progress bar with no dependencies
