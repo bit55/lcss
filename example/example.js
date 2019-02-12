@@ -21,7 +21,7 @@ $(function() {
 
     if (fileInput.files.length) {
       $(fileInput).parent('.btn-upload').addClass('selected');
-      $(fileInput).parent('.btn-upload').find('span').html('(' + fileNames.length + ' шт.) ' + fileNames.join("; ").trim());
+      $(fileInput).parent('.btn-upload').find('span').html('(' + fileNames.length + ') ' + fileNames.join("; ").trim());
     } else {
       $(fileInput).parent('.btn-upload').removeClass('selected');
       $(fileInput).parent('.btn-upload').find('span').html(defaultLabel);
