@@ -14,6 +14,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  width:100%;
   margin-left: -$column-gap;
   margin-right: -$column-gap;
   //margin-bottom: $column-gap*2;
