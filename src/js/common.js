@@ -39,6 +39,29 @@ $(document).ready(function(){
 });
 
 
+// navs & tabs
+$(function() {
+  // $('.tabs__link').click(function(e) {
+    // e.preventDefault();
+    // $(this).parent().parent().find('.tabs__link').removeClass('active');
+    // $(this).addClass('active');
+  // });
+
+  $('.nav-trigger').click(function(e) {
+    $('#responsive-nav').toggleClass('show-md');
+    if (!$('#responsive-nav').hasClass('show-md')) {
+      $('.nav-trigger').addClass('nav-is-visible');
+    } else {
+      $('.nav-trigger').removeClass('nav-is-visible');
+    }
+  });
+
+  $('[data-toggle="tooltip"]').tooltip({
+    delay: { "show": 0, "hide": 200 }
+  });
+});
+
+
 // Main object
 var cms = {};
 
@@ -230,14 +253,21 @@ var cms = {};
       cms.modal.waitClose(); // скрытие mprogress
       cms.modal.open(data);
     })
-    .fail(function() {
-      cms.modal.alert('Ошибка связи. Проверьте интернет<br> и попробуйте еще раз', cms.modal.closeAll);
+    .fail(function(error) {
+      console.log(error);
+      cms.modal.waitClose(); // скрытие mprogress
+      if (error.status != 0) {
+        cms.modal.alert(error.status+' '+error.statusText, cms.modal.close);
+      } else {
+        cms.modal.alert('Internet connection error', cms.modal.closeAll);
+      }      
     });
   };
 
   // close current dialog
   cms.modal.close = function() {
     if(current) current.close();
+    return false; /// new
   };
   // close all dialogs
   cms.modal.closeAll = function() {
@@ -248,6 +278,16 @@ var cms = {};
         if(elem) elem.close();
       }
     }
+  };
+  
+  cms.modal.responseErrorMsg = function(xhr) {
+    console.log(xhr);
+    cms.modal.waitClose(); // скрытие mprogress
+    if (xhr.status != 0) {
+        cms.modal.alert(xhr.status+' '+xhr.statusText, cms.modal.close);
+    } else {
+        cms.modal.alert('Internet connection error', cms.modal.close);
+    }   
   };
 
   /**
@@ -280,6 +320,7 @@ var cms = {};
    */
   cms.ajaxSubmit =  function (form, opts) {
     if(typeof opts.before === 'function') opts.before();
+    else cms.modal.wait(0);
 
     var url = opts.url || form.action;
 
@@ -293,13 +334,23 @@ var cms = {};
     xhr.onload = function(e) {
       if (xhr.readyState != 4) return;
       if (this.status == 200) {
-        if(typeof opts.success === 'function') opts.success(xhr.responseText);
+        cms.modal.waitClose();
+        // @todo responseJSON
+        if(typeof opts.success === 'function') opts.success(xhr);
       } else {
-        if(typeof opts.error === 'function') opts.error(this.status);
+        if(typeof opts.error === 'function') {
+            opts.error(xhr);
+        } else {
+            cms.modal.responseErrorMsg(xhr);
+        }
       }
     };
     xhr.onerror = function(e) {
-      if(typeof opts.error === 'function') opts.error();
+      if(typeof opts.error === 'function') {
+          opts.error(xhr);
+      } else {
+          cms.modal.responseErrorMsg(xhr);
+      }
     };
     return false;
   };
@@ -312,11 +363,16 @@ var cms = {};
       },
       success: function (data) {
         cms.modal.waitClose(); // скрытие mprogress
-        cms.modal.open(data);
+        cms.modal.open(data.responseText);
       },
-      error:   function (data) {
+      error:   function (error) {
+        console.log(error);
         cms.modal.waitClose(); // скрытие mprogress
-        cms.modal.alert('Ошибка связи. Проверьте интернет<br> и попробуйте еще раз', cms.modal.closeAll);
+        if (error.status != 0) {
+          cms.modal.alert(error.status+' '+error.statusText, cms.modal.close);
+        } else {
+          cms.modal.alert('Internet connection error', cms.modal.close);
+        }   
       }
     });
     return false;
@@ -396,7 +452,7 @@ cms.notice.hideAll = function () {
             right: '0',
             zIndex: 10000,
             background: '#FFDD57',
-            transition: 'width 0.3s linear'
+            transition: 'width 0.05s ease'
         }, styles);
     }
     function extend(destination) {
@@ -421,7 +477,7 @@ cms.notice.hideAll = function () {
     };
     MProgress.prototype.hide = function () {
         this.set(100);
-        setTimeout(this.remove.bind(this), 500);
+        setTimeout(this.remove.bind(this), 200);
         return this;
     };
     MProgress.prototype.remove = function () {

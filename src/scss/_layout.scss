@@ -44,6 +44,7 @@
 .nav {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 .nav.right {
   float: right;
@@ -138,9 +139,10 @@
   white-space: nowrap;
   color: transparent;
   cursor:pointer;
+  user-select: none;
 }
-.nav-trigger span, 
-.nav-trigger span::before, 
+.nav-trigger span,
+.nav-trigger span::before,
 .nav-trigger span::after {
   /* hamburger icon in CSS */
   position: absolute;

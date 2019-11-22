@@ -10,13 +10,13 @@
   </style>
   <link rel="stylesheet" href="/css/main.css" />
   <link rel="stylesheet" href="/css/fontawesome.min.css" />
-  
+
 
   <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
   <script src="/js/bundle.js"></script>
   <script src="/js/common.js"></script>
-  <script src="/example.js"></script> 
+  <script src="/example.js"></script>
 </head>
 
 <body class="app-body" style="">
@@ -29,7 +29,7 @@
           <a class="logo__link" href="#">Example App</a>
           <div class="nav-trigger">Menu <span></span></div>
         </div>
-        
+
     </div>
 
     <ul id="responsive-nav" class="nav col-md-10 show-md">
@@ -74,28 +74,44 @@
 <div class="container app-content">
 <div class="row">
   <div class="col">
-    <h1>This is 1st level heading</h1>
-    <button class="btn" onclick="cms.notice.show('Hello message')">Notice default</button>
-    <button class="btn primary" onclick="cms.notice.show('Hello message','primary')">primary</button>
-    <button class="btn success" onclick="cms.notice.show('Hello message','success')">success</button>
-    <button class="btn warning" onclick="cms.notice.show('Hello message','warning')">warning</button>
-    <button class="btn danger" onclick="cms.notice.show('Hello message','danger')">danger</button>
-    <button class="btn info" onclick="cms.notice.show('Hello message','info')">info</button>
-    <button class="btn moved" onclick="cms.notice.show('Hello message','moved')">moved</button>
-    <p>This is a test paragraph.</p>
+    <h2>Typography</h2>
+    <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+    <p>The following is <strong>rendered as bold text</strong>.</p>
+    <p>The following is <em>rendered as italicized text</em>.</p>
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+    <p>Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <blockquote>Blockquote content</blockquote>
+    <p>This is ordered list:</p>
+    <ol>
+      <li>One.</li>
+      <li>Two.</li>
+      <li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+      <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+    </ol>
     
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h2>This is 2nd level heading</h2>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h3>This is 3rd level heading</h3>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h4>This is 4th level heading</h4>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h5>This is 5th level heading</h5>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
-    <h6>This is 6th level heading</h6>
-    <p>This is a sample HTML document. Unlike Markdown <cite>documents</cite>, <em>HTML is simply</em> <q>displayed as-is</q>, so make sure you don't add tags that would interfere with the HTML of the wiki itself.</p>
+    <p>This is unordered list:</p>    
+    <ul>
+      <li>One.</li>
+      <li>Two.</li>
+      <li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
+      <li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
+    </ul>
+    
+    <p>This is a test paragraph with <code>code sample</code>.</p>
+    
+    <p>This is a test paragraph with a <a href="#">link</a> and an <a href="#" target="_blank">external link</a>.</p>
+
+    <p>Next block is multiline preformatted code:</p>
+
+    <pre><code>public static function danger404($msg = '')
+{
+      header('HTTP/1.0 404 Not Found');
+      if(!$msg) $msg = '404. Страница не найдена';
+      self::_()->title .= $msg;
+      self::_()->render('site/danger404', array('msg'=>$msg));
+      exit;
+}</code></pre>
 
     <p>This is a last paragraph in container.</p>
   </div>
@@ -109,187 +125,87 @@
   </div>
 </div>
 <hr>
-
-
-
-
 <div class="row">
-  <div class="col-md-12 col-lg-6"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
-  <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
-  <div class="col-md-6 col-lg-2"><div class="alert">.col</div></div>
-  <div class="col-md-12 col"><div class="alert">.col</div></div>
-</div>
-
-<!-- Downsize -->
-<div class="row">
-  <div class="col-6 col-md-12"><div class="alert">Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</div></div>
-  <div class="col-2 col-md-6"><div class="alert">.col</div></div>
-  <div class="col-2"><div class="alert">.col</div></div>
-  <div class="col"><div class="alert">.col</div></div>
-</div>
-
-<div class="row">
-  <div class="col"><div class="alert">.col</div></div>
-  <div class="col"><div class="alert">.col</div></div>
-  <div class="col"><div class="alert">.col</div></div>
+  <div class="col">
+    <h1>This is 1st level heading</h1>
+    <h2>This is 2nd level heading</h2>
+    <h3>This is 3rd level heading</h3>
+    <h4>This is 4th level heading</h4>
+    <h5>This is 5th level heading</h5>
+    <h6>This is 6th level heading</h6>
+  </div>
 </div>
 <hr>
-
-
-
-<p>This is a test paragraph.</p>
-
-<blockquote>Blockquote</blockquote>
-
-<ol>
-<li>One.</li>
-<li>Two.</li>
-<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-</ol>
-
-<div class="t1-for-modal"><p>This is a test paragraph.</p>
-
-<ul>
-<li>One.</li>
-<li>Two.</li>
-<li>Three. Well, probably this list item should be longer. Note that for short items lists look better if they are compactly presented, whereas for long items, it would be better to have more vertical spacing between items.</li>
-<li>Four. This is the last item in this list. Let us terminate the list now without making any more fuss about it.</li>
-</ul>
-
-<p>This is a test paragraph with <code>code</code>.</p>
-
-<p>This is a test paragraph and <a href="#">link</a>, and <a href="#" target="_blank">link external</a>.</p>
-<pre>
-<code>public static function danger404($msg = '')
-{
-  header('HTTP/1.0 404 Not Found');
-  if(!$msg) $msg = '404. Страница не найдена';
-  self::_()->title .= $msg;
-  self::_()->render('site/danger404', array('msg'=>$msg));
-  exit;
-}
-</code>
-</pre></div>
-
-<h2 id="badges">Badges</h2>
-
-<p>
-    <span class="badge">default</span>
-    <span class="badge success">success</span>
-    <span class="badge danger">danger</span>
-    <span class="badge warning">warning</span>
-    <span class="badge primary">primary</span>
-    <span class="badge info">info</span>
-    <span class="badge moved">moved</span>
-</p>
-<p>
-    <span class="badge subtle">default</span>
-    <span class="badge subtle success">success</span>
-    <span class="badge subtle danger">danger</span>
-    <span class="badge subtle warning">warning</span>
-    <span class="badge subtle primary">primary</span>
-    <span class="badge subtle info">info</span>
-    <span class="badge subtle moved">moved</span>
-</p>
-
-<h2>Badges (pill) <sup class="badge moved">New!</sup></h2>
-<hr>
-<cite>Use the <code>.pill</code> modifier class to make badges more rounded (with a larger border-radius).</cite>
-<hr>
-  <p>Colored badge
-  <span class="badge pill">default &times;</span>
-    <span class="badge pill success">success</span>
-    <span class="badge pill danger">danger</span>
-    <span class="badge pill warning">warning</span>
-    <span class="badge pill primary">primary</span>
-    <span class="badge pill info">info</span>
-    <span class="badge pill moved">moved</span>
-  <br></p>
-  <br>
-  <button class="btn">In button <span class="badge pill">1</span></button>
-  <button class="btn primary">In button <span class="badge pill">2</span></button>
-  <a href="#" class="btn primary">In link <span class="badge">2</span></a>
-  <button class="btn">In button <span class="badge warning">2</span></button>
-  <a href="#" class="btn">In link <span class="badge pill -warning">2</span></a>
-  <br>
-
-<h2><span class="ico left fa-home"></span>Icons</h2>
-
-<p>
-    <span class="fas fa-bars"></span>
-    <span class="ico fa-edit"></span>
-
-</p>
-<p>
-    <button class="btn"><i class="ico fa-edit"></i> Iconed button</button>
-    <button class="btn primary"><i class="ico fa-edit"></i> Iconed button</button>
-
-</p>
 
 <h2 id="buttons">Buttons</h2>
 <div>
-  <button class="btn">Button</button>
-  <a href="#" class="btn">Button as link</a>
-  <a href="#" class="btn primary">Button as link 2</a>
-  <button class="btn primary">Primary button</button>
-  <button class="btn light">Light button </button>
-
-  <br><br>
-
-  <button class="btn"><span class="ico left fa-cog loading" aria-hidden="true"></span> Iconed button</button>
-  <button class="btn"><span class="ico left fa-spinner loading" aria-hidden="true"></span> Iconed button</button>
-  <button class="btn"><span class="ico left fa-chart-bar"></span> Iconed button</button>
-
-  <br><br>
-
-  <button class="btn"><i class="ico left fa-check"></i> Iconed button</button>
-  <button class="btn"><i class="ico left fa-pencil-alt"></i> Iconed button</button>
-  <button class="btn"><i class="ico left fa-edit"></i> Iconed button</button>
-
-  <br><br>
-
-  <button class="btn" disabled>Disabled button</button>
-  <button class="btn subtle">Cancel</button>
-
-  <button class="btn"><span class="fa-sliders-h ico"></span></button>
-  <button class="btn subtle"><span class="fa-cogs ico"></span>  Subtle button</button>
-  <button class="btn" disabled>Disabled button</button>
-  <button class="btn primary" disabled>Primary disabled</button>
-
-  <br><br>
-  <button class="btn compact">Compact</button>
-  <button class="btn compact"><span class="ico left fa-bars"></span> Compact</button>
-  <button class="btn compact primary">Compact primary</button>
-  <a href="#3" class="btn compact">Compact link</a>
+  <p>
+    <button class="btn">Button</button>
+    <button class="btn primary">Primary</button>
+    <button class="btn success">Success</button>
+    <button class="btn danger">Danger</button>
+    <button class="btn danger">Warning</button>
+    <button class="btn danger">Info</button>
+    <a href="#" class="btn">Link as button</a>
+    <button class="btn subtle">Subtle button</button>
+  </p>
+  <p>
+    <button class="btn"><i class="ico left fa-check"></i>With icon</button>
+    <button class="btn"><i class="ico left fa-pencil-alt"></i>With icon</button>
+    <button class="btn"><span class="ico left fa-cog loading" aria-hidden="true"></span>Loading...</button>
+    <button class="btn"><span class="ico left fa-spinner loading" aria-hidden="true"></span>Loading...</button>
+    <button class="btn">Right ico <span class="ico right fa-power-off"></span></button>
+    <button class="btn" title="Icon only"><span class="fa-folder-open ico"></span></button>
+    <button class="btn subtle"><span class="fa-cloud-download-alt ico"></span></button>
+  </p>
+  <p>
+    <button class="btn" disabled>Disabled button</button>
+    <button class="btn primary" disabled>Primary disabled</button>
+  </p>
+  <p>  
+    <button class="btn compact">Compact</button>
+    <button class="btn compact"><span class="ico left fa-pencil-alt"></span> Compact</button>
+    <button class="btn compact primary">Compact primary</button>
+    <button class="btn compact subtle">Compact subtle</button>
+  </p>
 </div>
 
 
 
-<h3>Buttons group</h3>
+<h2>Button groups</h2>
 
 <div>
   <div class="btn-group">
-    <button class="btn">Button <span class="fa-ellipsis-h ico right"></span></button>
-    <a href="#" class="btn">Button as link</a>
-  </div>
-  <div class="btn-group">
     <button class="btn">Button</button>
+    <button class="btn active">Active</button>
     <button class="btn">Button</button>
-    <button class="btn" disabled>Disabled button</button>
-  </div>
-
-  <button class="btn" data-toggle="tooltip" data-placement="bottom" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">Modal</button>
-  <div class="dropdown">
-    <button id="btnGroupDrop2" type="button" class="btn success dropdown-toggle" data-toggle="dropdown">Success</button>
-    <div class="dropdown-menu">
-      <div class="dropdown-item-text">gregrwy rrewr yt ryweryetryt</div>
-      <a class="dropdown-item active" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
-      <a class="dropdown-item" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
-    </div>
+    <button class="btn" disabled>Disabled</button>
+    <button class="btn" data-toggle="tooltip" data-placement="bottom" title="Modal example with tooltip." onclick="cms.modal.open($('.t1-for-modal').html())">With tooltip & modal</button>
+    
   </div>
 </div>
 
+
+<h2>Dropdowns</h2>
+<div>
+  <span class="dropdown">
+    <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+    <div class="dropdown-menu">
+      <div class="dropdown-item-text">Some text</div>
+      <a class="dropdown-item active" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
+      <a class="dropdown-item" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
+    </div>
+  </span>
+
+  <span class="dropdown">
+    <button id="btnGroupDrop2" type="button" class="btn dropdown-toggle" data-toggle="dropdown">Right aligned</button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <div class="dropdown-item-text">Some text</div>
+      <a class="dropdown-item active" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
+      <a class="dropdown-item" href="#"><i class="ico left fa-check"></i>Dropdown link</a>
+    </div>
+  </span>
+</div>
 
 
 <h2 id="forms">Forms</h2>

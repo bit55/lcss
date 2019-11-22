@@ -2,24 +2,26 @@
   "name": "lcss",
   "version": "v2.0.0-beta",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.7.1",
-    "bootstrap": "^4.3.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": ">=4.3.1",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
+    "gulp-csso": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
-    "jquery": "^3.3.1",
-    "npm": "^6.7.0",
-    "popper.js": "^1.14.7",
-    "run-sequence": "^2.2.1",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
     "webpack-stream": "^5.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-connect": "^5.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build"
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "ws": "python -m SimpleHTTPServer 8001"
   },
   "author": "Eugene Dementyev",
   "license": "MIT"

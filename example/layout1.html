@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example page</title>
+
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,400italic,700italic&subset=cyrillic');
+  </style>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/fontawesome.min.css" />
+  
+
+  <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+  <script src="/js/bundle.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/example.js"></script> 
+</head>
+
+<body class="app-body" style="">
+
+<div class="header header-fixed" style="/*position:fixed; top:0;left:0;right:0*/">
+  <div class="header-inner row -gapless">
+
+    <div class="col-md-2">
+        <div class="logo">
+          <a class="logo__link" href="#">Example App</a>
+          <div class="nav-trigger">Menu <span></span></div>
+        </div>
+        
+    </div>
+
+    <ul id="responsive-nav" class="nav col-md-10 show-md">
+        <li class="nav__item"><a class="nav__link" href="#badges">Badges</a></li>
+        <li class="nav__item"><a class="nav__link" href="#buttons">Buttons</a></li>
+        <li class="nav__item"><a class="nav__link" href="#forms">Forms</a></li>
+        <li class="nav__item"><a class="nav__link" href="#tabs">Tabs</a></li>
+        <li class="nav__item dropdown">
+              <a class="nav__link dropdown-toggle" data-toggle="dropdown" href="#" id="download" aria-expanded="false">Paper <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="download">
+                <a class="dropdown-item" href="https://jsfiddle.net/bootswatch/9y480qo5/">Open in JSFiddle</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../4/paper/bootstrap.min.css">bootstrap.min.css</a>
+                <a class="dropdown-item" href="../4/paper/bootstrap.css">bootstrap.css</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../4/paper/_variables.scss">_variables.scss</a>
+                <a class="dropdown-item" href="../4/paper/_bootswatch.scss">_bootswatch.scss</a>
+              </div>
+            </li>
+        <li class="nav__item"><a href="#" class="btn primary">Button</a><a href="#" class="btn primary"><span class="fa-cog ico left"></span>With icon</a></li>
+        <li class="nav__item"><a href="#" class="btn light"><span class="fa-cog ico left"></span>With icon</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Link 1 <span id="top-badge" class="badge pill danger">danger</span></a></li>
+        <li class="nav__item right"><a class="nav__link" href="#"><i class="ico left fa-user-circle-o"></i> devg@ya.ru</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <p>Another text</p>
+    <div class="breadcrumb"><a href="#">Bread</a> / <a href="#">crumb</a></div>
+    <div class="page-header-right">
+      <button class="btn subtle" onclick="$('#top-badge').toggleClass('hidden')">Top badge</button>
+      <button class="btn subtle" href="/example/async.php" onclick="cms.ajaction(this);">Ajaction</button>
+      <button class="btn subtle" onclick="cms.modal.alert('Hello message wide');cms.modal.alert('Hello ')">Show simple modal</button>
+    </div>
+    <div class="page-header-main">Section title. Well, probably this text should be longer.</div>
+
+  </div>
+</header>
+
+<div class="container app-content">
+
+<div class="row">
+  <div class="col col-narrow" style="width:400px"><div class="alert success">400px</div></div>
+  <div class="col col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col col-md-2 col-sm-6"><div class="alert info">.col</div></div>
+  <div class="col"><div class="alert danger"><input type="text" class="input"></div></div>
+</div>
+
+</div>
+</div>
+
+
+<footer class="app-footer text-center">
+  LCSS v1.0+
+</footer>
+
+
+</body>
+</html>
